@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\QuanLyKhachHang",
+    "\\QuanLyKhachHang\\WindowsFormsApp1"
   ],
-  "SelectedNode": "\\F:\\QuanLyThuPhiCapNuocSach",
+  "SelectedNode": "\\QuanLyKhachHang\\WindowsFormsApp1\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
