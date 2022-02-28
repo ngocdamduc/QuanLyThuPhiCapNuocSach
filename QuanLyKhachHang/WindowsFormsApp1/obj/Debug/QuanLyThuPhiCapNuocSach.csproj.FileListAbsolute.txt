@@ -1,0 +1,10 @@
+F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\bin\Debug\QuanLyThuPhiCapNuocsach.exe.config
+F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\bin\Debug\QuanLyThuPhiCapNuocsach.exe
+F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\bin\Debug\QuanLyThuPhiCapNuocsach.pdb
+F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\obj\Debug\QuanLyThuPhiCapNuocSach.csproj.AssemblyReference.cache
+F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.QuanLyKhachHang.resources
+F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\obj\Debug\QuanLyThuPhiCapNuocsach.Properties.Resources.resources
+F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\obj\Debug\QuanLyThuPhiCapNuocSach.csproj.GenerateResource.cache
+F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\obj\Debug\QuanLyThuPhiCapNuocSach.csproj.CoreCompileInputs.cache
+F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\obj\Debug\QuanLyThuPhiCapNuocsach.exe
+F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\obj\Debug\QuanLyThuPhiCapNuocsach.pdb
