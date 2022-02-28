@@ -41,5 +41,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void txtSĐT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

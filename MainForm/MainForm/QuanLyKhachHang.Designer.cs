@@ -424,6 +424,7 @@
             this.txtSĐT.Name = "txtSĐT";
             this.txtSĐT.Size = new System.Drawing.Size(192, 22);
             this.txtSĐT.TabIndex = 2;
+            this.txtSĐT.TextChanged += new System.EventHandler(this.txtSĐT_TextChanged);
             // 
             // txtTenKH
             // 
