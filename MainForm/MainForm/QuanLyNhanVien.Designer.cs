@@ -31,9 +31,20 @@ namespace QuanLyThuPhiCapNuocsach
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabChiTiet = new System.Windows.Forms.TabPage();
+            this.dgrChiTietNV = new System.Windows.Forms.DataGridView();
+            this.lbChiTietNV = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThemNV = new System.Windows.Forms.Button();
+            this.btnCloseNV = new System.Windows.Forms.Button();
+            this.btnRefreshNV = new System.Windows.Forms.Button();
+            this.btnXoaNV = new System.Windows.Forms.Button();
+            this.btnSuaNV = new System.Windows.Forms.Button();
             this.grDanhMuc = new System.Windows.Forms.GroupBox();
+            this.mskNgaySinh = new System.Windows.Forms.MaskedTextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
+            this.txtChucVu = new System.Windows.Forms.TextBox();
+            this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.lbChucVu = new System.Windows.Forms.Label();
             this.lbDiaChi = new System.Windows.Forms.Label();
@@ -43,34 +54,23 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbTenNV = new System.Windows.Forms.Label();
             this.lbMaNV = new System.Windows.Forms.Label();
             this.tabTraCuu = new System.Windows.Forms.TabPage();
-            this.txtGioiTinh = new System.Windows.Forms.TextBox();
-            this.mskNgaySinh = new System.Windows.Forms.MaskedTextBox();
-            this.txtChucVu = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSuaNV = new System.Windows.Forms.Button();
-            this.btnThemNV = new System.Windows.Forms.Button();
-            this.btnXoaNV = new System.Windows.Forms.Button();
-            this.btnRefreshNV = new System.Windows.Forms.Button();
-            this.btnCloseNV = new System.Windows.Forms.Button();
-            this.lbChiTietNV = new System.Windows.Forms.Label();
-            this.dgrChiTietNV = new System.Windows.Forms.DataGridView();
-            this.grTraCuu = new System.Windows.Forms.GroupBox();
-            this.lbTimMaNV = new System.Windows.Forms.Label();
-            this.lbTimTenNV = new System.Windows.Forms.Label();
-            this.txtTimMaNV = new System.Windows.Forms.TextBox();
-            this.txtTimTenNV = new System.Windows.Forms.TextBox();
-            this.btnTimNV = new System.Windows.Forms.Button();
-            this.btnXoaLKH = new System.Windows.Forms.Button();
-            this.lbTraCuu = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lbTraCuu = new System.Windows.Forms.Label();
+            this.grTraCuu = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnTimNV = new System.Windows.Forms.Button();
+            this.txtTimTenNV = new System.Windows.Forms.TextBox();
+            this.txtTimMaNV = new System.Windows.Forms.TextBox();
+            this.lbTimTenNV = new System.Windows.Forms.Label();
+            this.lbTimMaNV = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabChiTiet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrChiTietNV)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.grDanhMuc.SuspendLayout();
             this.tabTraCuu.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrChiTietNV)).BeginInit();
-            this.grTraCuu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.grTraCuu.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -97,6 +97,103 @@ namespace QuanLyThuPhiCapNuocsach
             this.tabChiTiet.Text = "Thông tin Nhân Viên";
             this.tabChiTiet.UseVisualStyleBackColor = true;
             // 
+            // dgrChiTietNV
+            // 
+            this.dgrChiTietNV.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgrChiTietNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrChiTietNV.Location = new System.Drawing.Point(21, 373);
+            this.dgrChiTietNV.Name = "dgrChiTietNV";
+            this.dgrChiTietNV.RowHeadersWidth = 51;
+            this.dgrChiTietNV.RowTemplate.Height = 24;
+            this.dgrChiTietNV.Size = new System.Drawing.Size(1187, 298);
+            this.dgrChiTietNV.TabIndex = 16;
+            // 
+            // lbChiTietNV
+            // 
+            this.lbChiTietNV.AutoSize = true;
+            this.lbChiTietNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChiTietNV.ForeColor = System.Drawing.Color.Red;
+            this.lbChiTietNV.Location = new System.Drawing.Point(34, 345);
+            this.lbChiTietNV.Name = "lbChiTietNV";
+            this.lbChiTietNV.Size = new System.Drawing.Size(218, 23);
+            this.lbChiTietNV.TabIndex = 15;
+            this.lbChiTietNV.Text = "Bảng Chi Tiết Nhân Viên";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnThemNV);
+            this.groupBox1.Controls.Add(this.btnCloseNV);
+            this.groupBox1.Controls.Add(this.btnRefreshNV);
+            this.groupBox1.Controls.Add(this.btnXoaNV);
+            this.groupBox1.Controls.Add(this.btnSuaNV);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(21, 244);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1187, 91);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chức Năng";
+            // 
+            // btnThemNV
+            // 
+            this.btnThemNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnThemNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemNV.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnThemNV.Location = new System.Drawing.Point(47, 24);
+            this.btnThemNV.Name = "btnThemNV";
+            this.btnThemNV.Size = new System.Drawing.Size(121, 42);
+            this.btnThemNV.TabIndex = 14;
+            this.btnThemNV.Text = "Thêm";
+            this.btnThemNV.UseVisualStyleBackColor = false;
+            // 
+            // btnCloseNV
+            // 
+            this.btnCloseNV.BackColor = System.Drawing.Color.Transparent;
+            this.btnCloseNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseNV.ForeColor = System.Drawing.Color.Orange;
+            this.btnCloseNV.Location = new System.Drawing.Point(1015, 24);
+            this.btnCloseNV.Name = "btnCloseNV";
+            this.btnCloseNV.Size = new System.Drawing.Size(121, 42);
+            this.btnCloseNV.TabIndex = 14;
+            this.btnCloseNV.Text = "Close";
+            this.btnCloseNV.UseVisualStyleBackColor = false;
+            // 
+            // btnRefreshNV
+            // 
+            this.btnRefreshNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRefreshNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshNV.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnRefreshNV.Location = new System.Drawing.Point(581, 24);
+            this.btnRefreshNV.Name = "btnRefreshNV";
+            this.btnRefreshNV.Size = new System.Drawing.Size(121, 42);
+            this.btnRefreshNV.TabIndex = 14;
+            this.btnRefreshNV.Text = "Refresh";
+            this.btnRefreshNV.UseVisualStyleBackColor = false;
+            // 
+            // btnXoaNV
+            // 
+            this.btnXoaNV.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoaNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaNV.ForeColor = System.Drawing.Color.Red;
+            this.btnXoaNV.Location = new System.Drawing.Point(396, 24);
+            this.btnXoaNV.Name = "btnXoaNV";
+            this.btnXoaNV.Size = new System.Drawing.Size(121, 42);
+            this.btnXoaNV.TabIndex = 14;
+            this.btnXoaNV.Text = "Xóa";
+            this.btnXoaNV.UseVisualStyleBackColor = false;
+            // 
+            // btnSuaNV
+            // 
+            this.btnSuaNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSuaNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaNV.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSuaNV.Location = new System.Drawing.Point(221, 24);
+            this.btnSuaNV.Name = "btnSuaNV";
+            this.btnSuaNV.Size = new System.Drawing.Size(121, 42);
+            this.btnSuaNV.TabIndex = 14;
+            this.btnSuaNV.Text = "Sửa";
+            this.btnSuaNV.UseVisualStyleBackColor = false;
+            // 
             // grDanhMuc
             // 
             this.grDanhMuc.Controls.Add(this.mskNgaySinh);
@@ -121,6 +218,15 @@ namespace QuanLyThuPhiCapNuocsach
             this.grDanhMuc.Text = "Danh Mục";
             this.grDanhMuc.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // mskNgaySinh
+            // 
+            this.mskNgaySinh.Location = new System.Drawing.Point(626, 87);
+            this.mskNgaySinh.Mask = "00/00/0000";
+            this.mskNgaySinh.Name = "mskNgaySinh";
+            this.mskNgaySinh.Size = new System.Drawing.Size(169, 22);
+            this.mskNgaySinh.TabIndex = 2;
+            this.mskNgaySinh.ValidatingType = typeof(System.DateTime);
+            // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(157, 140);
@@ -134,6 +240,22 @@ namespace QuanLyThuPhiCapNuocsach
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(230, 22);
             this.txtTenNV.TabIndex = 1;
+            // 
+            // txtChucVu
+            // 
+            this.txtChucVu.Location = new System.Drawing.Point(626, 140);
+            this.txtChucVu.Name = "txtChucVu";
+            this.txtChucVu.Size = new System.Drawing.Size(169, 22);
+            this.txtChucVu.TabIndex = 1;
+            this.txtChucVu.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // txtGioiTinh
+            // 
+            this.txtGioiTinh.Location = new System.Drawing.Point(626, 33);
+            this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.Size = new System.Drawing.Size(76, 22);
+            this.txtGioiTinh.TabIndex = 1;
+            this.txtGioiTinh.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // txtMaNV
             // 
@@ -231,131 +353,31 @@ namespace QuanLyThuPhiCapNuocsach
             this.tabTraCuu.Text = "Tra Cứu Nhân Viên";
             this.tabTraCuu.UseVisualStyleBackColor = true;
             // 
-            // txtGioiTinh
+            // dataGridView1
             // 
-            this.txtGioiTinh.Location = new System.Drawing.Point(626, 33);
-            this.txtGioiTinh.Name = "txtGioiTinh";
-            this.txtGioiTinh.Size = new System.Drawing.Size(76, 22);
-            this.txtGioiTinh.TabIndex = 1;
-            this.txtGioiTinh.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(24, 212);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1187, 459);
+            this.dataGridView1.TabIndex = 17;
             // 
-            // mskNgaySinh
+            // lbTraCuu
             // 
-            this.mskNgaySinh.Location = new System.Drawing.Point(626, 87);
-            this.mskNgaySinh.Mask = "00/00/0000";
-            this.mskNgaySinh.Name = "mskNgaySinh";
-            this.mskNgaySinh.Size = new System.Drawing.Size(169, 22);
-            this.mskNgaySinh.TabIndex = 2;
-            this.mskNgaySinh.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtChucVu
-            // 
-            this.txtChucVu.Location = new System.Drawing.Point(626, 140);
-            this.txtChucVu.Name = "txtChucVu";
-            this.txtChucVu.Size = new System.Drawing.Size(169, 22);
-            this.txtChucVu.TabIndex = 1;
-            this.txtChucVu.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnThemNV);
-            this.groupBox1.Controls.Add(this.btnCloseNV);
-            this.groupBox1.Controls.Add(this.btnRefreshNV);
-            this.groupBox1.Controls.Add(this.btnXoaNV);
-            this.groupBox1.Controls.Add(this.btnSuaNV);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(21, 244);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1187, 91);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chức Năng";
-            // 
-            // btnSuaNV
-            // 
-            this.btnSuaNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSuaNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaNV.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSuaNV.Location = new System.Drawing.Point(221, 24);
-            this.btnSuaNV.Name = "btnSuaNV";
-            this.btnSuaNV.Size = new System.Drawing.Size(121, 42);
-            this.btnSuaNV.TabIndex = 14;
-            this.btnSuaNV.Text = "Sửa";
-            this.btnSuaNV.UseVisualStyleBackColor = false;
-            // 
-            // btnThemNV
-            // 
-            this.btnThemNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnThemNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemNV.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThemNV.Location = new System.Drawing.Point(47, 24);
-            this.btnThemNV.Name = "btnThemNV";
-            this.btnThemNV.Size = new System.Drawing.Size(121, 42);
-            this.btnThemNV.TabIndex = 14;
-            this.btnThemNV.Text = "Thêm";
-            this.btnThemNV.UseVisualStyleBackColor = false;
-            // 
-            // btnXoaNV
-            // 
-            this.btnXoaNV.BackColor = System.Drawing.Color.Transparent;
-            this.btnXoaNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaNV.ForeColor = System.Drawing.Color.Red;
-            this.btnXoaNV.Location = new System.Drawing.Point(396, 24);
-            this.btnXoaNV.Name = "btnXoaNV";
-            this.btnXoaNV.Size = new System.Drawing.Size(121, 42);
-            this.btnXoaNV.TabIndex = 14;
-            this.btnXoaNV.Text = "Xóa";
-            this.btnXoaNV.UseVisualStyleBackColor = false;
-            // 
-            // btnRefreshNV
-            // 
-            this.btnRefreshNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRefreshNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshNV.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRefreshNV.Location = new System.Drawing.Point(581, 24);
-            this.btnRefreshNV.Name = "btnRefreshNV";
-            this.btnRefreshNV.Size = new System.Drawing.Size(121, 42);
-            this.btnRefreshNV.TabIndex = 14;
-            this.btnRefreshNV.Text = "Refresh";
-            this.btnRefreshNV.UseVisualStyleBackColor = false;
-            // 
-            // btnCloseNV
-            // 
-            this.btnCloseNV.BackColor = System.Drawing.Color.Transparent;
-            this.btnCloseNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCloseNV.ForeColor = System.Drawing.Color.Orange;
-            this.btnCloseNV.Location = new System.Drawing.Point(1015, 24);
-            this.btnCloseNV.Name = "btnCloseNV";
-            this.btnCloseNV.Size = new System.Drawing.Size(121, 42);
-            this.btnCloseNV.TabIndex = 14;
-            this.btnCloseNV.Text = "Close";
-            this.btnCloseNV.UseVisualStyleBackColor = false;
-            // 
-            // lbChiTietNV
-            // 
-            this.lbChiTietNV.AutoSize = true;
-            this.lbChiTietNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChiTietNV.ForeColor = System.Drawing.Color.Red;
-            this.lbChiTietNV.Location = new System.Drawing.Point(34, 345);
-            this.lbChiTietNV.Name = "lbChiTietNV";
-            this.lbChiTietNV.Size = new System.Drawing.Size(218, 23);
-            this.lbChiTietNV.TabIndex = 15;
-            this.lbChiTietNV.Text = "Bảng Chi Tiết Nhân Viên";
-            // 
-            // dgrChiTietNV
-            // 
-            this.dgrChiTietNV.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgrChiTietNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrChiTietNV.Location = new System.Drawing.Point(21, 373);
-            this.dgrChiTietNV.Name = "dgrChiTietNV";
-            this.dgrChiTietNV.RowHeadersWidth = 51;
-            this.dgrChiTietNV.RowTemplate.Height = 24;
-            this.dgrChiTietNV.Size = new System.Drawing.Size(1187, 298);
-            this.dgrChiTietNV.TabIndex = 16;
+            this.lbTraCuu.AutoSize = true;
+            this.lbTraCuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTraCuu.ForeColor = System.Drawing.Color.Red;
+            this.lbTraCuu.Location = new System.Drawing.Point(35, 183);
+            this.lbTraCuu.Name = "lbTraCuu";
+            this.lbTraCuu.Size = new System.Drawing.Size(218, 23);
+            this.lbTraCuu.TabIndex = 1;
+            this.lbTraCuu.Text = "Bảng Chi Tiết Nhân Viên";
             // 
             // grTraCuu
             // 
-            this.grTraCuu.Controls.Add(this.btnXoaLKH);
+            this.grTraCuu.Controls.Add(this.btnRefresh);
             this.grTraCuu.Controls.Add(this.btnTimNV);
             this.grTraCuu.Controls.Add(this.txtTimTenNV);
             this.grTraCuu.Controls.Add(this.txtTimMaNV);
@@ -369,41 +391,17 @@ namespace QuanLyThuPhiCapNuocsach
             this.grTraCuu.TabStop = false;
             this.grTraCuu.Text = "Tra Cứu Thông Tin Nhân Viên";
             // 
-            // lbTimMaNV
+            // btnRefresh
             // 
-            this.lbTimMaNV.AutoSize = true;
-            this.lbTimMaNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTimMaNV.ForeColor = System.Drawing.Color.Blue;
-            this.lbTimMaNV.Location = new System.Drawing.Point(12, 56);
-            this.lbTimMaNV.Name = "lbTimMaNV";
-            this.lbTimMaNV.Size = new System.Drawing.Size(178, 23);
-            this.lbTimMaNV.TabIndex = 0;
-            this.lbTimMaNV.Text = "Nhập Mã Nhân Viên";
-            // 
-            // lbTimTenNV
-            // 
-            this.lbTimTenNV.AutoSize = true;
-            this.lbTimTenNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTimTenNV.ForeColor = System.Drawing.Color.Blue;
-            this.lbTimTenNV.Location = new System.Drawing.Point(448, 55);
-            this.lbTimTenNV.Name = "lbTimTenNV";
-            this.lbTimTenNV.Size = new System.Drawing.Size(231, 23);
-            this.lbTimTenNV.TabIndex = 0;
-            this.lbTimTenNV.Text = "Hoặc Nhập Tên Nhân Viên";
-            // 
-            // txtTimMaNV
-            // 
-            this.txtTimMaNV.Location = new System.Drawing.Point(196, 56);
-            this.txtTimMaNV.Name = "txtTimMaNV";
-            this.txtTimMaNV.Size = new System.Drawing.Size(219, 22);
-            this.txtTimMaNV.TabIndex = 1;
-            // 
-            // txtTimTenNV
-            // 
-            this.txtTimTenNV.Location = new System.Drawing.Point(685, 56);
-            this.txtTimTenNV.Name = "txtTimTenNV";
-            this.txtTimTenNV.Size = new System.Drawing.Size(219, 22);
-            this.txtTimTenNV.TabIndex = 1;
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.Orange;
+            this.btnRefresh.Location = new System.Drawing.Point(1031, 81);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(121, 42);
+            this.btnRefresh.TabIndex = 15;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
             // 
             // btnTimNV
             // 
@@ -417,39 +415,41 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnTimNV.Text = "Tìm";
             this.btnTimNV.UseVisualStyleBackColor = false;
             // 
-            // btnXoaLKH
+            // txtTimTenNV
             // 
-            this.btnXoaLKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnXoaLKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaLKH.ForeColor = System.Drawing.Color.Orange;
-            this.btnXoaLKH.Location = new System.Drawing.Point(1031, 81);
-            this.btnXoaLKH.Name = "btnXoaLKH";
-            this.btnXoaLKH.Size = new System.Drawing.Size(121, 42);
-            this.btnXoaLKH.TabIndex = 15;
-            this.btnXoaLKH.Text = "Xóa";
-            this.btnXoaLKH.UseVisualStyleBackColor = false;
+            this.txtTimTenNV.Location = new System.Drawing.Point(685, 56);
+            this.txtTimTenNV.Name = "txtTimTenNV";
+            this.txtTimTenNV.Size = new System.Drawing.Size(219, 22);
+            this.txtTimTenNV.TabIndex = 1;
             // 
-            // lbTraCuu
+            // txtTimMaNV
             // 
-            this.lbTraCuu.AutoSize = true;
-            this.lbTraCuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTraCuu.ForeColor = System.Drawing.Color.Red;
-            this.lbTraCuu.Location = new System.Drawing.Point(35, 183);
-            this.lbTraCuu.Name = "lbTraCuu";
-            this.lbTraCuu.Size = new System.Drawing.Size(218, 23);
-            this.lbTraCuu.TabIndex = 1;
-            this.lbTraCuu.Text = "Bảng Chi Tiết Nhân Viên";
+            this.txtTimMaNV.Location = new System.Drawing.Point(196, 56);
+            this.txtTimMaNV.Name = "txtTimMaNV";
+            this.txtTimMaNV.Size = new System.Drawing.Size(219, 22);
+            this.txtTimMaNV.TabIndex = 1;
             // 
-            // dataGridView1
+            // lbTimTenNV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 212);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1187, 459);
-            this.dataGridView1.TabIndex = 17;
+            this.lbTimTenNV.AutoSize = true;
+            this.lbTimTenNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTimTenNV.ForeColor = System.Drawing.Color.Blue;
+            this.lbTimTenNV.Location = new System.Drawing.Point(448, 55);
+            this.lbTimTenNV.Name = "lbTimTenNV";
+            this.lbTimTenNV.Size = new System.Drawing.Size(231, 23);
+            this.lbTimTenNV.TabIndex = 0;
+            this.lbTimTenNV.Text = "Hoặc Nhập Tên Nhân Viên";
+            // 
+            // lbTimMaNV
+            // 
+            this.lbTimMaNV.AutoSize = true;
+            this.lbTimMaNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTimMaNV.ForeColor = System.Drawing.Color.Blue;
+            this.lbTimMaNV.Location = new System.Drawing.Point(12, 56);
+            this.lbTimMaNV.Name = "lbTimMaNV";
+            this.lbTimMaNV.Size = new System.Drawing.Size(178, 23);
+            this.lbTimMaNV.TabIndex = 0;
+            this.lbTimMaNV.Text = "Nhập Mã Nhân Viên";
             // 
             // frmQuanLyNhanVien
             // 
@@ -463,15 +463,15 @@ namespace QuanLyThuPhiCapNuocsach
             this.tabControl1.ResumeLayout(false);
             this.tabChiTiet.ResumeLayout(false);
             this.tabChiTiet.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrChiTietNV)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.grDanhMuc.ResumeLayout(false);
             this.grDanhMuc.PerformLayout();
             this.tabTraCuu.ResumeLayout(false);
             this.tabTraCuu.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgrChiTietNV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.grTraCuu.ResumeLayout(false);
             this.grTraCuu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -510,7 +510,7 @@ namespace QuanLyThuPhiCapNuocsach
         private System.Windows.Forms.Label lbTimTenNV;
         private System.Windows.Forms.Label lbTimMaNV;
         private System.Windows.Forms.Label lbTraCuu;
-        private System.Windows.Forms.Button btnXoaLKH;
+        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
