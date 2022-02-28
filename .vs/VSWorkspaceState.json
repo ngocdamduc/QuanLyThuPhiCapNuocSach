@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\QuanLyKhachHang\\WindowsFormsApp1"
+    "\\MainForm",
+    "\\MainForm\\MainForm"
   ],
-  "SelectedNode": "\\QuanLyKhachHang",
+  "SelectedNode": "\\MainForm\\QuanLyKhachHang.sln",
   "PreviewInSolutionExplorer": false
 }
