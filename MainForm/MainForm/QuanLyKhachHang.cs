@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace QuanLyThuPhiCapNuocsach
 {
     public partial class QuanLyKhachHang : Form
     {
@@ -17,32 +17,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void lbHeading_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSĐT_TextChanged(object sender, EventArgs e)
+        private void btnThemKH_Click(object sender, EventArgs e)
         {
 
         }

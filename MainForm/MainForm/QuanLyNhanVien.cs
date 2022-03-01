@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyThuPhiCapNuocsach
 {
-    public partial class frmQuanLyNhanVien : Form
+    public partial class QuanLyNhanVien : Form
     {
-        public frmQuanLyNhanVien()
+        public QuanLyNhanVien()
         {
             InitializeComponent();
         }

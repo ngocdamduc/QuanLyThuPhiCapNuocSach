@@ -1,4 +1,5 @@
-﻿namespace WindowsFormsApp1
+﻿
+namespace QuanLyThuPhiCapNuocsach
 {
     partial class QuanLyKhachHang
     {
@@ -29,7 +30,7 @@
         private void InitializeComponent()
         {
             this.tbLoaiKhachHang = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClose2 = new System.Windows.Forms.Button();
             this.btnRefreshLKH = new System.Windows.Forms.Button();
             this.btnXoaLKH = new System.Windows.Forms.Button();
             this.btnSuaLKH = new System.Windows.Forms.Button();
@@ -40,11 +41,11 @@
             this.lbChiTietLoaiKH = new System.Windows.Forms.Label();
             this.lbLoaiKH = new System.Windows.Forms.Label();
             this.lbMaLoaiKH = new System.Windows.Forms.Label();
-            this.tbKhachHang = new System.Windows.Forms.TabPage();
-            this.btnKH = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnRefreshKH = new System.Windows.Forms.Button();
             this.btnTimKiemKH = new System.Windows.Forms.Button();
             this.btnXoaKH = new System.Windows.Forms.Button();
+            this.tbKhachHang = new System.Windows.Forms.TabPage();
             this.btnSuaKH = new System.Windows.Forms.Button();
             this.btnThemKH = new System.Windows.Forms.Button();
             this.dgrChiTietKH = new System.Windows.Forms.DataGridView();
@@ -72,7 +73,7 @@
             // 
             // tbLoaiKhachHang
             // 
-            this.tbLoaiKhachHang.Controls.Add(this.button1);
+            this.tbLoaiKhachHang.Controls.Add(this.btnClose2);
             this.tbLoaiKhachHang.Controls.Add(this.btnRefreshLKH);
             this.tbLoaiKhachHang.Controls.Add(this.btnXoaLKH);
             this.tbLoaiKhachHang.Controls.Add(this.btnSuaLKH);
@@ -86,29 +87,29 @@
             this.tbLoaiKhachHang.Location = new System.Drawing.Point(4, 28);
             this.tbLoaiKhachHang.Name = "tbLoaiKhachHang";
             this.tbLoaiKhachHang.Padding = new System.Windows.Forms.Padding(3);
-            this.tbLoaiKhachHang.Size = new System.Drawing.Size(1367, 716);
+            this.tbLoaiKhachHang.Size = new System.Drawing.Size(1263, 719);
             this.tbLoaiKhachHang.TabIndex = 1;
             this.tbLoaiKhachHang.Text = "Loại Khách Hàng";
             this.tbLoaiKhachHang.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnClose2
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(1240, 644);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 42);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnClose2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnClose2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose2.ForeColor = System.Drawing.Color.Red;
+            this.btnClose2.Location = new System.Drawing.Point(1108, 647);
+            this.btnClose2.Name = "btnClose2";
+            this.btnClose2.Size = new System.Drawing.Size(121, 42);
+            this.btnClose2.TabIndex = 14;
+            this.btnClose2.Text = "Close";
+            this.btnClose2.UseVisualStyleBackColor = false;
             // 
             // btnRefreshLKH
             // 
             this.btnRefreshLKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRefreshLKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefreshLKH.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRefreshLKH.Location = new System.Drawing.Point(1066, 358);
+            this.btnRefreshLKH.Location = new System.Drawing.Point(954, 358);
             this.btnRefreshLKH.Name = "btnRefreshLKH";
             this.btnRefreshLKH.Size = new System.Drawing.Size(121, 42);
             this.btnRefreshLKH.TabIndex = 14;
@@ -120,7 +121,7 @@
             this.btnXoaLKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnXoaLKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaLKH.ForeColor = System.Drawing.Color.Red;
-            this.btnXoaLKH.Location = new System.Drawing.Point(1066, 267);
+            this.btnXoaLKH.Location = new System.Drawing.Point(954, 275);
             this.btnXoaLKH.Name = "btnXoaLKH";
             this.btnXoaLKH.Size = new System.Drawing.Size(121, 42);
             this.btnXoaLKH.TabIndex = 14;
@@ -132,7 +133,7 @@
             this.btnSuaLKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSuaLKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaLKH.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSuaLKH.Location = new System.Drawing.Point(1066, 177);
+            this.btnSuaLKH.Location = new System.Drawing.Point(954, 177);
             this.btnSuaLKH.Name = "btnSuaLKH";
             this.btnSuaLKH.Size = new System.Drawing.Size(121, 42);
             this.btnSuaLKH.TabIndex = 14;
@@ -144,7 +145,7 @@
             this.btnThemLKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnThemLKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemLKH.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThemLKH.Location = new System.Drawing.Point(1066, 93);
+            this.btnThemLKH.Location = new System.Drawing.Point(954, 102);
             this.btnThemLKH.Name = "btnThemLKH";
             this.btnThemLKH.Size = new System.Drawing.Size(121, 42);
             this.btnThemLKH.TabIndex = 14;
@@ -168,7 +169,6 @@
             this.iDonGia.Name = "iDonGia";
             this.iDonGia.Size = new System.Drawing.Size(173, 22);
             this.iDonGia.TabIndex = 1;
-            this.iDonGia.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtLoaiKH
             // 
@@ -176,7 +176,6 @@
             this.txtLoaiKH.Name = "txtLoaiKH";
             this.txtLoaiKH.Size = new System.Drawing.Size(173, 22);
             this.txtLoaiKH.TabIndex = 1;
-            this.txtLoaiKH.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lbChiTietLoaiKH
             // 
@@ -211,9 +210,55 @@
             this.lbMaLoaiKH.TabIndex = 0;
             this.lbMaLoaiKH.Text = "Loại KH";
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnClose.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Red;
+            this.btnClose.Location = new System.Drawing.Point(1129, 642);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(106, 35);
+            this.btnClose.TabIndex = 13;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            // 
+            // btnRefreshKH
+            // 
+            this.btnRefreshKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRefreshKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshKH.Location = new System.Drawing.Point(1065, 401);
+            this.btnRefreshKH.Name = "btnRefreshKH";
+            this.btnRefreshKH.Size = new System.Drawing.Size(121, 34);
+            this.btnRefreshKH.TabIndex = 13;
+            this.btnRefreshKH.Text = "Refresh";
+            this.btnRefreshKH.UseVisualStyleBackColor = false;
+            // 
+            // btnTimKiemKH
+            // 
+            this.btnTimKiemKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnTimKiemKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemKH.Location = new System.Drawing.Point(1065, 330);
+            this.btnTimKiemKH.Name = "btnTimKiemKH";
+            this.btnTimKiemKH.Size = new System.Drawing.Size(121, 37);
+            this.btnTimKiemKH.TabIndex = 13;
+            this.btnTimKiemKH.Text = "Tìm Kiếm";
+            this.btnTimKiemKH.UseVisualStyleBackColor = false;
+            // 
+            // btnXoaKH
+            // 
+            this.btnXoaKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnXoaKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaKH.ForeColor = System.Drawing.Color.Red;
+            this.btnXoaKH.Location = new System.Drawing.Point(1065, 262);
+            this.btnXoaKH.Name = "btnXoaKH";
+            this.btnXoaKH.Size = new System.Drawing.Size(121, 36);
+            this.btnXoaKH.TabIndex = 13;
+            this.btnXoaKH.Text = "Xóa";
+            this.btnXoaKH.UseVisualStyleBackColor = false;
+            // 
             // tbKhachHang
             // 
-            this.tbKhachHang.Controls.Add(this.btnKH);
+            this.tbKhachHang.Controls.Add(this.btnClose);
             this.tbKhachHang.Controls.Add(this.btnRefreshKH);
             this.tbKhachHang.Controls.Add(this.btnTimKiemKH);
             this.tbKhachHang.Controls.Add(this.btnXoaKH);
@@ -237,85 +282,34 @@
             this.tbKhachHang.Location = new System.Drawing.Point(4, 28);
             this.tbKhachHang.Name = "tbKhachHang";
             this.tbKhachHang.Padding = new System.Windows.Forms.Padding(3);
-            this.tbKhachHang.Size = new System.Drawing.Size(1367, 716);
+            this.tbKhachHang.Size = new System.Drawing.Size(1263, 719);
             this.tbKhachHang.TabIndex = 0;
             this.tbKhachHang.Text = "Khách Hàng";
             this.tbKhachHang.UseVisualStyleBackColor = true;
-            // 
-            // btnKH
-            // 
-            this.btnKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKH.ForeColor = System.Drawing.Color.Orange;
-            this.btnKH.Location = new System.Drawing.Point(1245, 659);
-            this.btnKH.Name = "btnKH";
-            this.btnKH.Size = new System.Drawing.Size(106, 35);
-            this.btnKH.TabIndex = 13;
-            this.btnKH.Text = "Close";
-            this.btnKH.UseVisualStyleBackColor = false;
-            this.btnKH.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnRefreshKH
-            // 
-            this.btnRefreshKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRefreshKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshKH.Location = new System.Drawing.Point(1144, 410);
-            this.btnRefreshKH.Name = "btnRefreshKH";
-            this.btnRefreshKH.Size = new System.Drawing.Size(121, 34);
-            this.btnRefreshKH.TabIndex = 13;
-            this.btnRefreshKH.Text = "Refresh";
-            this.btnRefreshKH.UseVisualStyleBackColor = false;
-            this.btnRefreshKH.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnTimKiemKH
-            // 
-            this.btnTimKiemKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTimKiemKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiemKH.Location = new System.Drawing.Point(1144, 336);
-            this.btnTimKiemKH.Name = "btnTimKiemKH";
-            this.btnTimKiemKH.Size = new System.Drawing.Size(121, 37);
-            this.btnTimKiemKH.TabIndex = 13;
-            this.btnTimKiemKH.Text = "Tìm Kiếm";
-            this.btnTimKiemKH.UseVisualStyleBackColor = false;
-            this.btnTimKiemKH.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnXoaKH
-            // 
-            this.btnXoaKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnXoaKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaKH.ForeColor = System.Drawing.Color.Red;
-            this.btnXoaKH.Location = new System.Drawing.Point(1144, 262);
-            this.btnXoaKH.Name = "btnXoaKH";
-            this.btnXoaKH.Size = new System.Drawing.Size(121, 36);
-            this.btnXoaKH.TabIndex = 13;
-            this.btnXoaKH.Text = "Xóa";
-            this.btnXoaKH.UseVisualStyleBackColor = false;
-            this.btnXoaKH.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSuaKH
             // 
             this.btnSuaKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSuaKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaKH.Location = new System.Drawing.Point(1144, 188);
+            this.btnSuaKH.Location = new System.Drawing.Point(1065, 194);
             this.btnSuaKH.Name = "btnSuaKH";
             this.btnSuaKH.Size = new System.Drawing.Size(121, 36);
             this.btnSuaKH.TabIndex = 13;
             this.btnSuaKH.Text = "Sửa";
             this.btnSuaKH.UseVisualStyleBackColor = false;
-            this.btnSuaKH.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnThemKH
             // 
             this.btnThemKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnThemKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemKH.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThemKH.Location = new System.Drawing.Point(1144, 115);
+            this.btnThemKH.Location = new System.Drawing.Point(1065, 115);
             this.btnThemKH.Name = "btnThemKH";
             this.btnThemKH.Size = new System.Drawing.Size(121, 42);
             this.btnThemKH.TabIndex = 13;
             this.btnThemKH.Text = "Thêm";
             this.btnThemKH.UseVisualStyleBackColor = false;
-            this.btnThemKH.Click += new System.EventHandler(this.button1_Click);
+            this.btnThemKH.Click += new System.EventHandler(this.btnThemKH_Click);
             // 
             // dgrChiTietKH
             // 
@@ -424,7 +418,6 @@
             this.txtSĐT.Name = "txtSĐT";
             this.txtSĐT.Size = new System.Drawing.Size(192, 22);
             this.txtSĐT.TabIndex = 2;
-            this.txtSĐT.TextChanged += new System.EventHandler(this.txtSĐT_TextChanged);
             // 
             // txtTenKH
             // 
@@ -468,21 +461,21 @@
             this.tabKhachHang.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabKhachHang.Controls.Add(this.tbKhachHang);
             this.tabKhachHang.Controls.Add(this.tbLoaiKhachHang);
-            this.tabKhachHang.Location = new System.Drawing.Point(0, 0);
+            this.tabKhachHang.Location = new System.Drawing.Point(12, 12);
             this.tabKhachHang.Name = "tabKhachHang";
             this.tabKhachHang.SelectedIndex = 0;
-            this.tabKhachHang.Size = new System.Drawing.Size(1375, 748);
-            this.tabKhachHang.TabIndex = 0;
+            this.tabKhachHang.Size = new System.Drawing.Size(1271, 751);
+            this.tabKhachHang.TabIndex = 1;
             this.tabKhachHang.Tag = "";
             // 
             // QuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1380, 746);
+            this.ClientSize = new System.Drawing.Size(1296, 772);
             this.Controls.Add(this.tabKhachHang);
             this.Name = "QuanLyKhachHang";
-            this.Text = "Quản Lý Khách Hàng";
+            this.Text = "QuanLyKhachHang";
             this.tbLoaiKhachHang.ResumeLayout(false);
             this.tbLoaiKhachHang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -497,7 +490,7 @@
         #endregion
 
         private System.Windows.Forms.TabPage tbLoaiKhachHang;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClose2;
         private System.Windows.Forms.Button btnRefreshLKH;
         private System.Windows.Forms.Button btnXoaLKH;
         private System.Windows.Forms.Button btnSuaLKH;
@@ -508,11 +501,11 @@
         private System.Windows.Forms.Label lbChiTietLoaiKH;
         private System.Windows.Forms.Label lbLoaiKH;
         private System.Windows.Forms.Label lbMaLoaiKH;
-        private System.Windows.Forms.TabPage tbKhachHang;
-        private System.Windows.Forms.Button btnKH;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnRefreshKH;
         private System.Windows.Forms.Button btnTimKiemKH;
         private System.Windows.Forms.Button btnXoaKH;
+        private System.Windows.Forms.TabPage tbKhachHang;
         private System.Windows.Forms.Button btnSuaKH;
         private System.Windows.Forms.Button btnThemKH;
         private System.Windows.Forms.DataGridView dgrChiTietKH;
@@ -533,4 +526,3 @@
         private System.Windows.Forms.TabControl tabKhachHang;
     }
 }
-

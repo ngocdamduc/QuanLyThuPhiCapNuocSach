@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyThuPhiCapNuocsach
 {
-    partial class frmQuanLyNhanVien
+    partial class QuanLyNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -451,13 +451,13 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbTimMaNV.TabIndex = 0;
             this.lbTimMaNV.Text = "Nhập Mã Nhân Viên";
             // 
-            // frmQuanLyNhanVien
+            // QuanLyNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1239, 708);
             this.Controls.Add(this.tabControl1);
-            this.Name = "frmQuanLyNhanVien";
+            this.Name = "QuanLyNhanVien";
             this.Text = "Quản Lý Nhân Viên";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);

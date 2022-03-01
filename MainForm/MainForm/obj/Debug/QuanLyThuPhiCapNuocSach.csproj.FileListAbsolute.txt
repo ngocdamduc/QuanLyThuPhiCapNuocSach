@@ -8,3 +8,17 @@ F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\obj\Debug\QuanLyThuP
 F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\obj\Debug\QuanLyThuPhiCapNuocSach.csproj.CoreCompileInputs.cache
 F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\obj\Debug\QuanLyThuPhiCapNuocsach.exe
 F:\QuanLyThuPhiCapNuocSach\QuanLyKhachHang\WindowsFormsApp1\obj\Debug\QuanLyThuPhiCapNuocsach.pdb
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\bin\Debug\QuanLyThuPhiCapNuocsach.exe.config
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\bin\Debug\QuanLyThuPhiCapNuocsach.exe
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\bin\Debug\QuanLyThuPhiCapNuocsach.pdb
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocSach.csproj.AssemblyReference.cache
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.Index.resources
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.QuanLyCongTo.resources
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.QuanLyHoaDon.resources
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.QuanLyNhanVien.resources
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.Properties.Resources.resources
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocSach.csproj.GenerateResource.cache
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocSach.csproj.CoreCompileInputs.cache
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.exe
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.pdb
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.QuanLyKhachHang.resources
