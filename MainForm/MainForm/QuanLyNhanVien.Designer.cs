@@ -145,6 +145,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnThemNV.TabIndex = 14;
             this.btnThemNV.Text = "Thêm";
             this.btnThemNV.UseVisualStyleBackColor = false;
+            this.btnThemNV.Click += new System.EventHandler(this.btnThemNV_Click);
             // 
             // btnCloseNV
             // 
@@ -157,6 +158,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnCloseNV.TabIndex = 14;
             this.btnCloseNV.Text = "Close";
             this.btnCloseNV.UseVisualStyleBackColor = false;
+            this.btnCloseNV.Click += new System.EventHandler(this.btnCloseNV_Click);
             // 
             // btnRefreshNV
             // 
@@ -169,6 +171,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnRefreshNV.TabIndex = 14;
             this.btnRefreshNV.Text = "Refresh";
             this.btnRefreshNV.UseVisualStyleBackColor = false;
+            this.btnRefreshNV.Click += new System.EventHandler(this.btnRefreshNV_Click);
             // 
             // btnXoaNV
             // 
@@ -216,7 +219,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.grDanhMuc.TabIndex = 0;
             this.grDanhMuc.TabStop = false;
             this.grDanhMuc.Text = "Danh Mục";
-            this.grDanhMuc.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // mskNgaySinh
             // 
@@ -247,7 +249,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.txtChucVu.Name = "txtChucVu";
             this.txtChucVu.Size = new System.Drawing.Size(169, 22);
             this.txtChucVu.TabIndex = 1;
-            this.txtChucVu.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // txtGioiTinh
             // 
@@ -255,7 +256,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.Size = new System.Drawing.Size(76, 22);
             this.txtGioiTinh.TabIndex = 1;
-            this.txtGioiTinh.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // txtMaNV
             // 
@@ -274,7 +274,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbChucVu.Size = new System.Drawing.Size(72, 19);
             this.lbChucVu.TabIndex = 0;
             this.lbChucVu.Text = "Chức Vụ";
-            this.lbChucVu.Click += new System.EventHandler(this.lbChucVu_Click);
             // 
             // lbDiaChi
             // 
@@ -357,7 +356,7 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 212);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 209);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -417,14 +416,14 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             // txtTimTenNV
             // 
-            this.txtTimTenNV.Location = new System.Drawing.Point(685, 56);
+            this.txtTimTenNV.Location = new System.Drawing.Point(748, 55);
             this.txtTimTenNV.Name = "txtTimTenNV";
             this.txtTimTenNV.Size = new System.Drawing.Size(219, 22);
             this.txtTimTenNV.TabIndex = 1;
             // 
             // txtTimMaNV
             // 
-            this.txtTimMaNV.Location = new System.Drawing.Point(196, 56);
+            this.txtTimMaNV.Location = new System.Drawing.Point(228, 56);
             this.txtTimMaNV.Name = "txtTimMaNV";
             this.txtTimMaNV.Size = new System.Drawing.Size(219, 22);
             this.txtTimMaNV.TabIndex = 1;
@@ -434,7 +433,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbTimTenNV.AutoSize = true;
             this.lbTimTenNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimTenNV.ForeColor = System.Drawing.Color.Blue;
-            this.lbTimTenNV.Location = new System.Drawing.Point(448, 55);
+            this.lbTimTenNV.Location = new System.Drawing.Point(492, 53);
             this.lbTimTenNV.Name = "lbTimTenNV";
             this.lbTimTenNV.Size = new System.Drawing.Size(231, 23);
             this.lbTimTenNV.TabIndex = 0;
@@ -459,7 +458,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.Controls.Add(this.tabControl1);
             this.Name = "QuanLyNhanVien";
             this.Text = "Quản Lý Nhân Viên";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabChiTiet.ResumeLayout(false);
             this.tabChiTiet.PerformLayout();

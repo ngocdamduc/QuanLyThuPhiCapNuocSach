@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\MainForm",
-    "\\MainForm\\MainForm"
+    "\\MainForm\\MainForm",
+    "\\MainForm\\MainForm\\bin"
   ],
-  "SelectedNode": "\\MainForm\\QuanLyThuPhiCapNuocSach.sln",
+  "SelectedNode": "\\MainForm\\MainForm\\QuanLyHoaDon.cs",
   "PreviewInSolutionExplorer": true
 }

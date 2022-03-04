@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using QuanLyThuPhiCapNuocsach.DAO;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace QuanLyThuPhiCapNuocsach
@@ -15,26 +11,58 @@ namespace QuanLyThuPhiCapNuocsach
         public QuanLyNhanVien()
         {
             InitializeComponent();
+            LoadNhanVienList();
+            AddNhanVienBinding();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnCloseNV_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            this.Dispose();
+        }
+        void LoadNhanVienList()
+        {
+             
+            string query = "SELECT * FROM tbl_NhanVien";
+            dgrChiTietNV.DataSource = DataProvider.Instance.ExecuteQuery(query);
+        }
+        void AddNhanVienBinding()
+        {
+            txtMaNV.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "sMaNV", true, DataSourceUpdateMode.Never));
+            txtTenNV.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "sTenNV", true, DataSourceUpdateMode.Never));
+            txtDiaChi.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "sDiachi", true, DataSourceUpdateMode.Never));
+            txtGioiTinh.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "bGioiTinh", true, DataSourceUpdateMode.Never));
+            mskNgaySinh.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "dNgaySinh", true, DataSourceUpdateMode.Never));
+            txtChucVu.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "sChucVu", true, DataSourceUpdateMode.Never));
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void btnThemNV_Click(object sender, EventArgs e)
         {
-
+            string maNV = txtMaNV.Text;
+            string tenNV = txtTenNV.Text;
+            string DiaChi = txtDiaChi.Text;
+            string GioiTinh = txtGioiTinh.Text;
+            string NgaySinh = mskNgaySinh.Text;
+            string ChucVu = txtChucVu.Text;
+            if(NhanVienDAO.Instance.InsertNV(maNV, tenNV, DiaChi, GioiTinh, NgaySinh, ChucVu))
+            {
+                MessageBox.Show("Thêm Nhân Viên Thành Công!");
+                LoadNhanVienList();
+            }
+            else
+            {
+                MessageBox.Show("Có Lỗi Khi Thêm Nhân Viên!");
+            }
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void btnRefreshNV_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void lbChucVu_Click(object sender, EventArgs e)
-        {
-
+            txtMaNV.Text = " ";
+            txtTenNV.Text = " ";
+            txtDiaChi.Text = " ";
+            txtGioiTinh.Text = " ";
+            mskNgaySinh.Text = " ";
+            txtChucVu.Text = " ";
         }
     }
 }

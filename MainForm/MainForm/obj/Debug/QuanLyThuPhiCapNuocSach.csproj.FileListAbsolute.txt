@@ -22,3 +22,5 @@ F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocSach.c
 F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.exe
 F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.pdb
 F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.QuanLyKhachHang.resources
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.SignIn.resources
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.SignUp.resources

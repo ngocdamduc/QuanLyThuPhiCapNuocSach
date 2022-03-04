@@ -121,7 +121,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnXoaLKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnXoaLKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaLKH.ForeColor = System.Drawing.Color.Red;
-            this.btnXoaLKH.Location = new System.Drawing.Point(954, 275);
+            this.btnXoaLKH.Location = new System.Drawing.Point(954, 262);
             this.btnXoaLKH.Name = "btnXoaLKH";
             this.btnXoaLKH.Size = new System.Drawing.Size(121, 42);
             this.btnXoaLKH.TabIndex = 14;
