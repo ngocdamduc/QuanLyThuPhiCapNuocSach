@@ -39,7 +39,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.label1 = new System.Windows.Forms.Label();
             this.btnDangky = new System.Windows.Forms.Button();
             this.btnTrolai = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtMaNv = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtNhaplai
@@ -145,8 +145,9 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnDangky.Name = "btnDangky";
             this.btnDangky.Size = new System.Drawing.Size(137, 44);
             this.btnDangky.TabIndex = 21;
-            this.btnDangky.Text = "Đăng ký";
+            this.btnDangky.Text = "Đăng Ký";
             this.btnDangky.UseVisualStyleBackColor = true;
+            this.btnDangky.Click += new System.EventHandler(this.btnDangky_Click);
             // 
             // btnTrolai
             // 
@@ -157,23 +158,24 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnTrolai.Name = "btnTrolai";
             this.btnTrolai.Size = new System.Drawing.Size(127, 44);
             this.btnTrolai.TabIndex = 20;
-            this.btnTrolai.Text = "Trở lại";
+            this.btnTrolai.Text = "Trở Lại";
             this.btnTrolai.UseVisualStyleBackColor = true;
+            this.btnTrolai.Click += new System.EventHandler(this.btnTrolai_Click);
             // 
-            // comboBox1
+            // txtMaNv
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(258, 210);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(227, 24);
-            this.comboBox1.TabIndex = 22;
+            this.txtMaNv.FormattingEnabled = true;
+            this.txtMaNv.Location = new System.Drawing.Point(258, 210);
+            this.txtMaNv.Name = "txtMaNv";
+            this.txtMaNv.Size = new System.Drawing.Size(227, 24);
+            this.txtMaNv.TabIndex = 22;
             // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 534);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtMaNv);
             this.Controls.Add(this.txtNhaplai);
             this.Controls.Add(this.txtMatkhau);
             this.Controls.Add(this.txtTaikhoan);
@@ -186,6 +188,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.Controls.Add(this.btnTrolai);
             this.Name = "SignUp";
             this.Text = "Đăng ký";
+            this.Load += new System.EventHandler(this.SignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,6 +206,6 @@ namespace QuanLyThuPhiCapNuocsach
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDangky;
         private System.Windows.Forms.Button btnTrolai;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox txtMaNv;
     }
 }

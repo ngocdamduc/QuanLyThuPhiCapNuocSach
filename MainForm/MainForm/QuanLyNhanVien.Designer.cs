@@ -29,6 +29,7 @@ namespace QuanLyThuPhiCapNuocsach
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabChiTiet = new System.Windows.Forms.TabPage();
             this.dgrChiTietNV = new System.Windows.Forms.DataGridView();
@@ -40,7 +41,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnXoaNV = new System.Windows.Forms.Button();
             this.btnSuaNV = new System.Windows.Forms.Button();
             this.grDanhMuc = new System.Windows.Forms.GroupBox();
-            this.mskNgaySinh = new System.Windows.Forms.MaskedTextBox();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.txtChucVu = new System.Windows.Forms.TextBox();
@@ -60,9 +61,8 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnTimNV = new System.Windows.Forms.Button();
             this.txtTimTenNV = new System.Windows.Forms.TextBox();
-            this.txtTimMaNV = new System.Windows.Forms.TextBox();
             this.lbTimTenNV = new System.Windows.Forms.Label();
-            this.lbTimMaNV = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabChiTiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrChiTietNV)).BeginInit();
@@ -103,7 +103,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.dgrChiTietNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrChiTietNV.Location = new System.Drawing.Point(21, 373);
             this.dgrChiTietNV.Name = "dgrChiTietNV";
-            this.dgrChiTietNV.RowHeadersWidth = 51;
+            this.dgrChiTietNV.RowHeadersWidth = 55;
             this.dgrChiTietNV.RowTemplate.Height = 24;
             this.dgrChiTietNV.Size = new System.Drawing.Size(1187, 298);
             this.dgrChiTietNV.TabIndex = 16;
@@ -184,6 +184,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnXoaNV.TabIndex = 14;
             this.btnXoaNV.Text = "Xóa";
             this.btnXoaNV.UseVisualStyleBackColor = false;
+            this.btnXoaNV.Click += new System.EventHandler(this.btnXoaNV_Click);
             // 
             // btnSuaNV
             // 
@@ -196,10 +197,11 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnSuaNV.TabIndex = 14;
             this.btnSuaNV.Text = "Sửa";
             this.btnSuaNV.UseVisualStyleBackColor = false;
+            this.btnSuaNV.Click += new System.EventHandler(this.btnSuaNV_Click);
             // 
             // grDanhMuc
             // 
-            this.grDanhMuc.Controls.Add(this.mskNgaySinh);
+            this.grDanhMuc.Controls.Add(this.dtpNgaySinh);
             this.grDanhMuc.Controls.Add(this.txtDiaChi);
             this.grDanhMuc.Controls.Add(this.txtTenNV);
             this.grDanhMuc.Controls.Add(this.txtChucVu);
@@ -220,14 +222,12 @@ namespace QuanLyThuPhiCapNuocsach
             this.grDanhMuc.TabStop = false;
             this.grDanhMuc.Text = "Danh Mục";
             // 
-            // mskNgaySinh
+            // dtpNgaySinh
             // 
-            this.mskNgaySinh.Location = new System.Drawing.Point(626, 87);
-            this.mskNgaySinh.Mask = "00/00/0000";
-            this.mskNgaySinh.Name = "mskNgaySinh";
-            this.mskNgaySinh.Size = new System.Drawing.Size(169, 22);
-            this.mskNgaySinh.TabIndex = 2;
-            this.mskNgaySinh.ValidatingType = typeof(System.DateTime);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(626, 90);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 22);
+            this.dtpNgaySinh.TabIndex = 2;
             // 
             // txtDiaChi
             // 
@@ -379,9 +379,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.grTraCuu.Controls.Add(this.btnRefresh);
             this.grTraCuu.Controls.Add(this.btnTimNV);
             this.grTraCuu.Controls.Add(this.txtTimTenNV);
-            this.grTraCuu.Controls.Add(this.txtTimMaNV);
             this.grTraCuu.Controls.Add(this.lbTimTenNV);
-            this.grTraCuu.Controls.Add(this.lbTimMaNV);
             this.grTraCuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grTraCuu.Location = new System.Drawing.Point(24, 15);
             this.grTraCuu.Name = "grTraCuu";
@@ -401,6 +399,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnRefresh.TabIndex = 15;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnTimNV
             // 
@@ -413,42 +412,31 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnTimNV.TabIndex = 15;
             this.btnTimNV.Text = "Tìm";
             this.btnTimNV.UseVisualStyleBackColor = false;
+            this.btnTimNV.Click += new System.EventHandler(this.btnTimNV_Click);
             // 
             // txtTimTenNV
             // 
-            this.txtTimTenNV.Location = new System.Drawing.Point(748, 55);
+            this.txtTimTenNV.Location = new System.Drawing.Point(421, 53);
             this.txtTimTenNV.Name = "txtTimTenNV";
-            this.txtTimTenNV.Size = new System.Drawing.Size(219, 22);
+            this.txtTimTenNV.Size = new System.Drawing.Size(566, 22);
             this.txtTimTenNV.TabIndex = 1;
-            // 
-            // txtTimMaNV
-            // 
-            this.txtTimMaNV.Location = new System.Drawing.Point(228, 56);
-            this.txtTimMaNV.Name = "txtTimMaNV";
-            this.txtTimMaNV.Size = new System.Drawing.Size(219, 22);
-            this.txtTimMaNV.TabIndex = 1;
             // 
             // lbTimTenNV
             // 
             this.lbTimTenNV.AutoSize = true;
             this.lbTimTenNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimTenNV.ForeColor = System.Drawing.Color.Blue;
-            this.lbTimTenNV.Location = new System.Drawing.Point(492, 53);
+            this.lbTimTenNV.Location = new System.Drawing.Point(30, 53);
             this.lbTimTenNV.Name = "lbTimTenNV";
-            this.lbTimTenNV.Size = new System.Drawing.Size(231, 23);
+            this.lbTimTenNV.Size = new System.Drawing.Size(350, 23);
             this.lbTimTenNV.TabIndex = 0;
-            this.lbTimTenNV.Text = "Hoặc Nhập Tên Nhân Viên";
+            this.lbTimTenNV.Text = "Nhập Mã Nhân Viên hoặc Tên Nhân Viên";
             // 
-            // lbTimMaNV
+            // contextMenuStrip1
             // 
-            this.lbTimMaNV.AutoSize = true;
-            this.lbTimMaNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTimMaNV.ForeColor = System.Drawing.Color.Blue;
-            this.lbTimMaNV.Location = new System.Drawing.Point(12, 56);
-            this.lbTimMaNV.Name = "lbTimMaNV";
-            this.lbTimMaNV.Size = new System.Drawing.Size(178, 23);
-            this.lbTimMaNV.TabIndex = 0;
-            this.lbTimMaNV.Text = "Nhập Mã Nhân Viên";
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // QuanLyNhanVien
             // 
@@ -458,6 +446,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.Controls.Add(this.tabControl1);
             this.Name = "QuanLyNhanVien";
             this.Text = "Quản Lý Nhân Viên";
+            this.Load += new System.EventHandler(this.QuanLyNhanVien_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabChiTiet.ResumeLayout(false);
             this.tabChiTiet.PerformLayout();
@@ -490,7 +479,6 @@ namespace QuanLyThuPhiCapNuocsach
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbTenNV;
         private System.Windows.Forms.Label lbMaNV;
-        private System.Windows.Forms.MaskedTextBox mskNgaySinh;
         private System.Windows.Forms.TextBox txtGioiTinh;
         private System.Windows.Forms.TextBox txtChucVu;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -504,11 +492,11 @@ namespace QuanLyThuPhiCapNuocsach
         private System.Windows.Forms.GroupBox grTraCuu;
         private System.Windows.Forms.Button btnTimNV;
         private System.Windows.Forms.TextBox txtTimTenNV;
-        private System.Windows.Forms.TextBox txtTimMaNV;
         private System.Windows.Forms.Label lbTimTenNV;
-        private System.Windows.Forms.Label lbTimMaNV;
         private System.Windows.Forms.Label lbTraCuu;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
     }
 }

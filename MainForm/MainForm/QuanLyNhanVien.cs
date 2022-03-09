@@ -1,7 +1,5 @@
-﻿using QuanLyThuPhiCapNuocsach.DAO;
+﻿using QuanLyThuPhiCapNuocsach.BUS;
 using System;
-using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace QuanLyThuPhiCapNuocsach
@@ -11,57 +9,90 @@ namespace QuanLyThuPhiCapNuocsach
         public QuanLyNhanVien()
         {
             InitializeComponent();
-            LoadNhanVienList();
-            AddNhanVienBinding();
+        }
+         private void btnCloseNV_Click(object sender, System.EventArgs e)
+        {
+            Index index = new Index();
+            this.Close();
+        }
+        NhanVien_BUS nvb = new NhanVien_BUS();
+
+        private void QuanLyNhanVien_Load(object sender, System.EventArgs e)
+        {
+            LoadListNV();
+            BindingData();
+            
+        }
+        void LoadListNV()
+        {
+            dgrChiTietNV.DataSource = nvb.getNhanVien();
+            dataGridView1.DataSource = nvb.getNhanVien();
+        }
+        private void btnThemNV_Click(object sender, System.EventArgs e)
+        {
+            if (txtMaNV.Text.Trim() == "")
+                MessageBox.Show("Mã nhân viên không được để trống !");
+            else if (txtTenNV.Text.Trim() == "")
+                MessageBox.Show("Tên nhân viên không được để trống !");
+            else
+                nvb.insertNV(txtMaNV.Text, txtTenNV.Text, txtDiaChi.Text, txtGioiTinh.Text, dtpNgaySinh.Value.ToString("dd/MM/yyyy"), txtChucVu.Text);
+            QuanLyNhanVien_Load(sender, e);
         }
 
-        private void btnCloseNV_Click(object sender, EventArgs e)
+        private void btnSuaNV_Click(object sender, System.EventArgs e)
         {
-            this.Close();
-            this.Dispose();
+            if (txtMaNV.Text.Trim() == "")
+                MessageBox.Show("Mã nhân viên không được để trống !");
+            else if (txtTenNV.Text.Trim() == "")
+                MessageBox.Show("Tên nhân viên không được để trống !");
+            else
+                nvb.updateNV(txtMaNV.Text, txtTenNV.Text, txtDiaChi.Text, txtGioiTinh.Text, dtpNgaySinh.Value.ToString("dd/MM/yyyy"), txtChucVu.Text);
+            QuanLyNhanVien_Load(sender, e);
         }
-        void LoadNhanVienList()
+
+        private void btnXoaNV_Click(object sender, System.EventArgs e)
         {
-             
-            string query = "SELECT * FROM tbl_NhanVien";
-            dgrChiTietNV.DataSource = DataProvider.Instance.ExecuteQuery(query);
+            try
+            {
+                if (MessageBox.Show("Bạn có muốn xóa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    nvb.deleteNV(txtMaNV.Text);
+                    QuanLyNhanVien_Load(sender, e);
+                }    
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xóa" + ex.Message);
+            }
+            
         }
-        void AddNhanVienBinding()
+        void BindingData()
         {
             txtMaNV.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "sMaNV", true, DataSourceUpdateMode.Never));
             txtTenNV.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "sTenNV", true, DataSourceUpdateMode.Never));
             txtDiaChi.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "sDiachi", true, DataSourceUpdateMode.Never));
-            txtGioiTinh.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "bGioiTinh", true, DataSourceUpdateMode.Never));
-            mskNgaySinh.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "dNgaySinh", true, DataSourceUpdateMode.Never));
+            txtGioiTinh.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "bGioitinh", true, DataSourceUpdateMode.Never));
+            dtpNgaySinh.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "dNgaySinh", true, DataSourceUpdateMode.Never));
             txtChucVu.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "sChucVu", true, DataSourceUpdateMode.Never));
         }
 
-        private void btnThemNV_Click(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, System.EventArgs e)
         {
-            string maNV = txtMaNV.Text;
-            string tenNV = txtTenNV.Text;
-            string DiaChi = txtDiaChi.Text;
-            string GioiTinh = txtGioiTinh.Text;
-            string NgaySinh = mskNgaySinh.Text;
-            string ChucVu = txtChucVu.Text;
-            if(NhanVienDAO.Instance.InsertNV(maNV, tenNV, DiaChi, GioiTinh, NgaySinh, ChucVu))
-            {
-                MessageBox.Show("Thêm Nhân Viên Thành Công!");
-                LoadNhanVienList();
-            }
-            else
-            {
-                MessageBox.Show("Có Lỗi Khi Thêm Nhân Viên!");
-            }
+            txtTimTenNV.Text = " ";
+            LoadListNV();
         }
 
-        private void btnRefreshNV_Click(object sender, EventArgs e)
+        private void btnTimNV_Click(object sender, System.EventArgs e)
+        {
+            dataGridView1.DataSource = nvb.Search(txtTimTenNV.Text);
+        }
+
+        private void btnRefreshNV_Click(object sender, System.EventArgs e)
         {
             txtMaNV.Text = " ";
             txtTenNV.Text = " ";
             txtDiaChi.Text = " ";
             txtGioiTinh.Text = " ";
-            mskNgaySinh.Text = " ";
             txtChucVu.Text = " ";
         }
     }

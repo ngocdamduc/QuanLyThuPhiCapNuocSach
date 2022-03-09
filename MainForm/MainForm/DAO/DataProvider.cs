@@ -1,97 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QuanLyThuPhiCapNuocsach.DAO
 {
     public class DataProvider
     {
-        private static DataProvider instance;
-        string connectionSTR = "Data Source =.\\SQLEXPRESS; Initial Catalog = QuanLyNuocSach; Integrated Security = True";
-
-        public static DataProvider Instance {
-            get {if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
-            private set { DataProvider.instance = value; }
-        }
-        public DataTable ExecuteQuery(string query, object[] parameter = null)
+        public SqlConnection getConnect()
         {
-           DataTable data = new DataTable();
-           using (SqlConnection connection = new SqlConnection(connectionSTR))
-            {
-                connection.Open();
-                SqlCommand command = new SqlCommand(query, connection);
-                if (parameter != null)
-                {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
-                    {
-                        if (item.Contains('@'))
-                        {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
-                        }
-                    }
-                }
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(data);
-                connection.Close();
-            }    
-            return data;
+            String strConn = @"Data Source=ASUS-X507UF\SQLEXPRESS;Initial Catalog=QuanLyNuocSach;Integrated Security=True";
+            return new SqlConnection(strConn);
         }
-        public int ExecuteNonQuery(string query, object[] parameter = null)
+        public DataTable GetTable(String sql)
         {
-            int data = 0;
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            DataTable dt = new DataTable();
+            SqlConnection conn = getConnect();
+            if(conn.State == ConnectionState.Closed)
             {
-                connection.Open();
-                SqlCommand command = new SqlCommand(query, connection);
-                if(parameter != null)
-                {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
-                    {
-                        if (item.Contains('@'))
-                        {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
-                        }
-                    }    
-                }
-                data = command.ExecuteNonQuery();
-                connection.Close();
+                conn.Open();
             }
-            return data;
+            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+            da.Fill(dt);
+            conn.Close();
+            return dt;
         }
-        public object ExecuteScalar(string query, object[] parameter = null)
+        public void ExcuteNonQuery(String sql)
         {
-            object data = 0;
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            SqlConnection conn = getConnect();
+            if (conn.State == ConnectionState.Closed)
             {
-                connection.Open();
-                SqlCommand command = new SqlCommand(query, connection);
-                if (parameter != null)
-                {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
-                    {
-                        if (item.Contains('@'))
-                        {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
-                        }
-                    }
-                }
-                data = command.ExecuteScalar();
-                connection.Close();
+                conn.Open();
             }
-            return data;
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            cmd.Clone();
+            conn.Close();
         }
+        public String ExecuteScalar(String sql)
+        {
+            SqlConnection conn = getConnect();
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            String kq = cmd.ExecuteScalar().ToString();
+            conn.Close();
+            return kq;
+        }    
     }
 }

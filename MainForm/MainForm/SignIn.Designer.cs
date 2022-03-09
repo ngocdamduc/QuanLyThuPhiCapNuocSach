@@ -98,6 +98,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnDangky.TabIndex = 13;
             this.btnDangky.Text = "Đăng ký";
             this.btnDangky.UseVisualStyleBackColor = false;
+            this.btnDangky.Click += new System.EventHandler(this.btnDangky_Click);
             // 
             // btnDangnhap
             // 
@@ -108,6 +109,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnDangnhap.TabIndex = 12;
             this.btnDangnhap.Text = "Đăng nhập";
             this.btnDangnhap.UseVisualStyleBackColor = false;
+            this.btnDangnhap.Click += new System.EventHandler(this.btnDangnhap_Click);
             // 
             // SignIn
             // 
@@ -122,6 +124,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.Controls.Add(this.btnDangky);
             this.Controls.Add(this.btnDangnhap);
             this.Name = "SignIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignIn";
             this.ResumeLayout(false);
             this.PerformLayout();

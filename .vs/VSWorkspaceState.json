@@ -3,8 +3,9 @@
     "",
     "\\MainForm",
     "\\MainForm\\MainForm",
-    "\\MainForm\\MainForm\\bin"
+    "\\MainForm\\MainForm\\bin",
+    "\\MainForm\\MainForm\\DAO"
   ],
-  "SelectedNode": "\\MainForm\\MainForm\\QuanLyHoaDon.cs",
+  "SelectedNode": "\\MainForm\\MainForm\\App.config",
   "PreviewInSolutionExplorer": true
 }
