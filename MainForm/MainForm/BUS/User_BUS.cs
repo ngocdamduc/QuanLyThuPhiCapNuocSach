@@ -1,11 +1,7 @@
 ﻿using QuanLyThuPhiCapNuocsach.DAO;
 using QuanLyThuPhiCapNuocsach.DTO;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QuanLyThuPhiCapNuocsach.BUS
 {
@@ -20,9 +16,9 @@ namespace QuanLyThuPhiCapNuocsach.BUS
             dt = da.GetTable(sql);
             return dt;
         }
-        public void insertUser(String username, String pass, String manv)
+        public void insertUser(String manv, String username, String pass)
         {
-            String sql = "EXEC '@MaNV', '@TenDangNhap', '@MatKhau'";
+            String sql = " INSERT INTO tbl_TaiKhoan VALUES('" + username + "','" + manv + "','" + pass + "')";
             da.ExcuteNonQuery(sql);
         }
         

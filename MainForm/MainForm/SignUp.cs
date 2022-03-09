@@ -23,9 +23,9 @@ namespace QuanLyThuPhiCapNuocsach
         {
             try
             {
-                if (txtNhaplai.Text == txtMatkhau.Text)
+                if (txtNhapLai.Text == txtMatKhau.Text)
                 {
-                    ub.insertUser(txtTaikhoan.Text, txtMatkhau.Text, txtMaNv.Text);
+                    ub.insertUser(txtTaikhoan.Text, txtMaNv.Text, txtMatKhau.Text);
                     MessageBox.Show("Đăng ký tài khoản thành công!");
                 }
                 else
@@ -39,7 +39,7 @@ namespace QuanLyThuPhiCapNuocsach
             }
             catch (SqlException)
             {
-                MessageBox.Show("Tài khoản đã tồn tại!");
+                MessageBox.Show("Tài Khoản đã tồn tại!");
             }
         }
 

@@ -29,8 +29,6 @@ namespace QuanLyThuPhiCapNuocsach
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNhaplai = new System.Windows.Forms.TextBox();
-            this.txtMatkhau = new System.Windows.Forms.TextBox();
             this.txtTaikhoan = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,27 +38,9 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnDangky = new System.Windows.Forms.Button();
             this.btnTrolai = new System.Windows.Forms.Button();
             this.txtMaNv = new System.Windows.Forms.ComboBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.txtNhapLai = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // txtNhaplai
-            // 
-            this.txtNhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtNhaplai.Location = new System.Drawing.Point(258, 316);
-            this.txtNhaplai.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNhaplai.Name = "txtNhaplai";
-            this.txtNhaplai.PasswordChar = 'c';
-            this.txtNhaplai.Size = new System.Drawing.Size(227, 30);
-            this.txtNhaplai.TabIndex = 19;
-            // 
-            // txtMatkhau
-            // 
-            this.txtMatkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMatkhau.Location = new System.Drawing.Point(258, 256);
-            this.txtMatkhau.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMatkhau.Name = "txtMatkhau";
-            this.txtMatkhau.PasswordChar = 'c';
-            this.txtMatkhau.Size = new System.Drawing.Size(227, 30);
-            this.txtMatkhau.TabIndex = 17;
             // 
             // txtTaikhoan
             // 
@@ -170,14 +150,30 @@ namespace QuanLyThuPhiCapNuocsach
             this.txtMaNv.Size = new System.Drawing.Size(227, 24);
             this.txtMaNv.TabIndex = 22;
             // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.Location = new System.Drawing.Point(258, 264);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(227, 22);
+            this.txtMatKhau.TabIndex = 27;
+            // 
+            // txtNhapLai
+            // 
+            this.txtNhapLai.Location = new System.Drawing.Point(258, 325);
+            this.txtNhapLai.Name = "txtNhapLai";
+            this.txtNhapLai.PasswordChar = '*';
+            this.txtNhapLai.Size = new System.Drawing.Size(227, 22);
+            this.txtNhapLai.TabIndex = 24;
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 534);
+            this.Controls.Add(this.txtNhapLai);
+            this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtMaNv);
-            this.Controls.Add(this.txtNhaplai);
-            this.Controls.Add(this.txtMatkhau);
             this.Controls.Add(this.txtTaikhoan);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -195,9 +191,6 @@ namespace QuanLyThuPhiCapNuocsach
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtNhaplai;
-        private System.Windows.Forms.TextBox txtMatkhau;
         private System.Windows.Forms.TextBox txtTaikhoan;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -207,5 +200,7 @@ namespace QuanLyThuPhiCapNuocsach
         private System.Windows.Forms.Button btnDangky;
         private System.Windows.Forms.Button btnTrolai;
         private System.Windows.Forms.ComboBox txtMaNv;
+        private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.TextBox txtNhapLai;
     }
 }
