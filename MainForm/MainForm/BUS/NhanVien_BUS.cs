@@ -60,7 +60,7 @@ namespace QuanLyThuPhiCapNuocsach.BUS
         public DataTable Search(String condition)
         {
             DataTable da = null;
-            String sql = "SELECT * FROM tbl_NhanVien WHERE sMaNV like '%" + condition + "%' OR sTenNV like N'%" + condition + "%'";
+            String sql = "SELECT * FROM tbl_NhanVien WHERE sMaNV LIKE N'%" + condition + "%' OR sTenNV LIKE N'%" + condition + "%'";
             da = dt.GetTable(sql);
             return da;
         }

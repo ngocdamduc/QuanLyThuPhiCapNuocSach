@@ -41,13 +41,23 @@ namespace QuanLyThuPhiCapNuocsach
 
         private void btnSuaNV_Click(object sender, System.EventArgs e)
         {
-            if (txtMaNV.Text.Trim() == "")
-                MessageBox.Show("Mã nhân viên không được để trống !");
-            else if (txtTenNV.Text.Trim() == "")
-                MessageBox.Show("Tên nhân viên không được để trống !");
-            else
-                nvb.updateNV(txtMaNV.Text, txtTenNV.Text, txtDiaChi.Text, txtGioiTinh.Text, dtpNgaySinh.Value.ToString("dd/MM/yyyy"), txtChucVu.Text);
-            QuanLyNhanVien_Load(sender, e);
+            try
+            {
+                if (MessageBox.Show("Bạn có muốn sửa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    if (txtMaNV.Text.Trim() == "")
+                        MessageBox.Show("Mã nhân viên không được để trống !");
+                    else if (txtTenNV.Text.Trim() == "")
+                        MessageBox.Show("Tên nhân viên không được để trống !");
+                    else
+                    nvb.updateNV(txtMaNV.Text, txtTenNV.Text, txtDiaChi.Text, txtGioiTinh.Text, dtpNgaySinh.Value.ToString("dd/MM/yyyy"), txtChucVu.Text);
+                    QuanLyNhanVien_Load(sender, e);
+                }
+            }
+           catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi sửa!" + ex.Message);
+            }
         }
 
         private void btnXoaNV_Click(object sender, System.EventArgs e)
@@ -68,12 +78,19 @@ namespace QuanLyThuPhiCapNuocsach
         }
         void BindingData()
         {
+            txtMaNV.DataBindings.Clear();
             txtMaNV.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "sMaNV", true, DataSourceUpdateMode.Never));
+            txtTenNV.DataBindings.Clear();
             txtTenNV.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "sTenNV", true, DataSourceUpdateMode.Never));
+            txtDiaChi.DataBindings.Clear();
             txtDiaChi.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "sDiachi", true, DataSourceUpdateMode.Never));
+            txtGioiTinh.DataBindings.Clear();
             txtGioiTinh.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "bGioitinh", true, DataSourceUpdateMode.Never));
+            dtpNgaySinh.DataBindings.Clear();
             dtpNgaySinh.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "dNgaySinh", true, DataSourceUpdateMode.Never));
+            txtChucVu.DataBindings.Clear();
             txtChucVu.DataBindings.Add(new Binding("Text", dgrChiTietNV.DataSource, "sChucVu", true, DataSourceUpdateMode.Never));
+
         }
 
         private void btnRefresh_Click(object sender, System.EventArgs e)
