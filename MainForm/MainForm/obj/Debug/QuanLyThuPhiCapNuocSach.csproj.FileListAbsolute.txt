@@ -87,3 +87,4 @@ C:\Users\nguye\Source\Repos\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\
 C:\Users\nguye\Source\Repos\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocSach.csproj.CopyComplete
 C:\Users\nguye\Source\Repos\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.exe
 C:\Users\nguye\Source\Repos\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.pdb
+C:\Users\nguye\source\repos\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.frmReportNV.resources

@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>QuanLyThuPhiCapNuocsach</RootNamespace>
     <AssemblyName>QuanLyThuPhiCapNuocsach</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -115,6 +115,14 @@
     <Compile Include="BUS\NhanVien_BUS.cs" />
     <Compile Include="BUS\User_BUS.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="dsNhanVien.cs">
+      <DependentUpon>dsNhanVien.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsNhanVien.Designer.cs">
+      <DependentUpon>dsNhanVien.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="DTO\NhanVien_DTO.cs" />
     <Compile Include="DTO\User_DTO.cs" />
     <Compile Include="frmReportNV.cs">

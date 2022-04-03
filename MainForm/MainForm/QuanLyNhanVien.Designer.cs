@@ -35,6 +35,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.dgrChiTietNV = new System.Windows.Forms.DataGridView();
             this.lbChiTietNV = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnInNV = new System.Windows.Forms.Button();
             this.btnThemNV = new System.Windows.Forms.Button();
             this.btnCloseNV = new System.Windows.Forms.Button();
             this.btnRefreshNV = new System.Windows.Forms.Button();
@@ -63,7 +64,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.txtTimTenNV = new System.Windows.Forms.TextBox();
             this.lbTimTenNV = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btnInNV = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabChiTiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrChiTietNV)).BeginInit();
@@ -135,6 +135,17 @@ namespace QuanLyThuPhiCapNuocsach
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức Năng";
+            // 
+            // btnInNV
+            // 
+            this.btnInNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInNV.Location = new System.Drawing.Point(564, 25);
+            this.btnInNV.Name = "btnInNV";
+            this.btnInNV.Size = new System.Drawing.Size(116, 43);
+            this.btnInNV.TabIndex = 15;
+            this.btnInNV.Text = "In";
+            this.btnInNV.UseVisualStyleBackColor = true;
+            this.btnInNV.Click += new System.EventHandler(this.btnInNV_Click_1);
             // 
             // btnThemNV
             // 
@@ -226,6 +237,7 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             // dtpNgaySinh
             // 
+            this.dtpNgaySinh.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaySinh.Location = new System.Drawing.Point(626, 90);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(200, 22);
@@ -315,7 +327,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(527, 87);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 17);
+            this.label6.Size = new System.Drawing.Size(50, 16);
             this.label6.TabIndex = 0;
             this.label6.Text = "label1";
             // 
@@ -439,17 +451,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // btnInNV
-            // 
-            this.btnInNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInNV.Location = new System.Drawing.Point(564, 25);
-            this.btnInNV.Name = "btnInNV";
-            this.btnInNV.Size = new System.Drawing.Size(116, 43);
-            this.btnInNV.TabIndex = 15;
-            this.btnInNV.Text = "In";
-            this.btnInNV.UseVisualStyleBackColor = true;
-            this.btnInNV.Click += new System.EventHandler(this.btnInNV_Click_1);
             // 
             // QuanLyNhanVien
             // 
