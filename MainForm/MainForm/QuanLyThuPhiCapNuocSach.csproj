@@ -104,9 +104,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\KhachHang_BUS.cs" />
     <Compile Include="BUS\NhanVien_BUS.cs" />
     <Compile Include="BUS\User_BUS.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DTO\KhachHang_DTO.cs" />
     <Compile Include="DTO\NhanVien_DTO.cs" />
     <Compile Include="DTO\User_DTO.cs" />
     <Compile Include="QuanLyKhachHang.cs">
