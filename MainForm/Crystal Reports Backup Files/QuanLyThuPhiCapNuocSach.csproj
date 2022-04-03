@@ -120,8 +120,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS\HoaDon_BUS.cs" />
-    <Compile Include="BUS\KhachHang_BUS.cs" />
     <Compile Include="BUS\NhanVien_BUS.cs" />
     <Compile Include="BUS\User_BUS.cs" />
     <Compile Include="DAO\DataProvider.cs" />
