@@ -37,7 +37,7 @@ namespace QuanLyThuPhiCapNuocsach.BUS
 
         public void updateCT(string mact, string ngaylapdat, string hangsx, string makh, string manv)
         {
-            String sql = "UPDATE tbl_CongTo SET sMaCT = '" + mact + "',dNgayLapDat'" + ngaylapdat + "',sHangSX=N'" + hangsx + "',sMaKH=N'" + makh + "',sMaNV='" + manv +  "' where sMaCT='" + mact + "'";
+            String sql = "UPDATE tbl_CongTo SET sMaCT = '" + mact + "',dNgayLapDat='" + ngaylapdat + "',sHangSX=N'" + hangsx + "',sMaKH='" + makh + "',sMaNV='" + manv + "' where sMaCT='" + mact + "'";
             try
             {
                 dt.ExcuteNonQuery(sql);
@@ -67,6 +67,20 @@ namespace QuanLyThuPhiCapNuocsach.BUS
         {
             DataTable da = null;
             String sql = "SELECT * FROM tbl_CongTo WHERE sMaCT LIKE N'%" + condition + "%' OR sMaKH LIKE N'%" + condition + "%'";
+            da = dt.GetTable(sql);
+            return da;
+        }
+        public DataTable getMaNV()
+        {
+            DataTable da = null;
+            String sql = "SELECT sMaNV FROM tbl_NhanVien";
+            da = dt.GetTable(sql);
+            return da;
+        }
+        public DataTable getKH()
+        {
+            DataTable da = null;
+            String sql = "SELECT sMaKH FROM tbl_KhachHang";
             da = dt.GetTable(sql);
             return da;
         }

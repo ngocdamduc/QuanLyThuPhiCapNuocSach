@@ -21,7 +21,7 @@ namespace QuanLyThuPhiCapNuocsach
             else if (txtCSM.Text.Trim() == "")
                 MessageBox.Show("Chỉ số mới không được để trống! ");
             else
-                hdb.insertHD(txtMaHD.Text, cbMaCT.Text, txtCSC.Text, txtCSM.Text, dtpNgayLap.Value.ToString("dd/MM/yyyy"), cbMaKH.Text, cbMaNV.Text, cbLoaiKH.Text);
+                hdb.insertHD(txtMaHD.Text, cbMaCT.Text, txtCSC.Text, txtCSM.Text, dtpNgayLap.Value.ToString("yyyy-MM-dd"), cbMaKH.Text, cbMaNV.Text, cbLoaiKH.Text);
             QuanLyHoaDon_Load(sender, e);
         }
 

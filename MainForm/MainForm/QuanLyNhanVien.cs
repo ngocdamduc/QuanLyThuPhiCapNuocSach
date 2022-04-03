@@ -35,7 +35,7 @@ namespace QuanLyThuPhiCapNuocsach
             else if (txtTenNV.Text.Trim() == "")
                 MessageBox.Show("Tên nhân viên không được để trống !");
             else
-                nvb.insertNV(txtMaNV.Text, txtTenNV.Text, txtDiaChi.Text, txtGioiTinh.Text, dtpNgaySinh.Value.ToString("dd/MM/yyyy"), txtChucVu.Text);
+                nvb.insertNV(txtMaNV.Text, txtTenNV.Text, txtDiaChi.Text, txtGioiTinh.Text, dtpNgaySinh.Value.ToString("yyyy-MM-dd"), txtChucVu.Text);
             QuanLyNhanVien_Load(sender, e);
         }
 
