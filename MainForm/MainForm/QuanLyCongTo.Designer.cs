@@ -30,11 +30,11 @@ namespace QuanLyThuPhiCapNuocsach
         private void InitializeComponent()
         {
             this.grDanhMuc = new System.Windows.Forms.GroupBox();
-            this.mskNgayLapDat = new System.Windows.Forms.MaskedTextBox();
-            this.txtChiSo = new System.Windows.Forms.TextBox();
+            this.dtpNgayLapDat = new System.Windows.Forms.DateTimePicker();
+            this.txtMaNV = new System.Windows.Forms.ComboBox();
+            this.txtMaKH = new System.Windows.Forms.ComboBox();
             this.txtHangSX = new System.Windows.Forms.TextBox();
             this.txtMaCT = new System.Windows.Forms.TextBox();
-            this.lbChiSo = new System.Windows.Forms.Label();
             this.lbMaNV = new System.Windows.Forms.Label();
             this.lbHangSX = new System.Windows.Forms.Label();
             this.lbNgayLapDat = new System.Windows.Forms.Label();
@@ -50,8 +50,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnSuaCT = new System.Windows.Forms.Button();
             this.lbChiTietCT = new System.Windows.Forms.Label();
             this.dgrChiTietCT = new System.Windows.Forms.DataGridView();
-            this.cbMaKH = new System.Windows.Forms.ComboBox();
-            this.cbMaNV = new System.Windows.Forms.ComboBox();
             this.grDanhMuc.SuspendLayout();
             this.grChucNang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrChiTietCT)).BeginInit();
@@ -59,13 +57,11 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             // grDanhMuc
             // 
-            this.grDanhMuc.Controls.Add(this.cbMaNV);
-            this.grDanhMuc.Controls.Add(this.cbMaKH);
-            this.grDanhMuc.Controls.Add(this.mskNgayLapDat);
-            this.grDanhMuc.Controls.Add(this.txtChiSo);
+            this.grDanhMuc.Controls.Add(this.dtpNgayLapDat);
+            this.grDanhMuc.Controls.Add(this.txtMaNV);
+            this.grDanhMuc.Controls.Add(this.txtMaKH);
             this.grDanhMuc.Controls.Add(this.txtHangSX);
             this.grDanhMuc.Controls.Add(this.txtMaCT);
-            this.grDanhMuc.Controls.Add(this.lbChiSo);
             this.grDanhMuc.Controls.Add(this.lbMaNV);
             this.grDanhMuc.Controls.Add(this.lbHangSX);
             this.grDanhMuc.Controls.Add(this.lbNgayLapDat);
@@ -73,74 +69,76 @@ namespace QuanLyThuPhiCapNuocsach
             this.grDanhMuc.Controls.Add(this.lbMaKH);
             this.grDanhMuc.Controls.Add(this.lbMaCT);
             this.grDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grDanhMuc.Location = new System.Drawing.Point(62, 32);
+            this.grDanhMuc.Location = new System.Drawing.Point(70, 40);
+            this.grDanhMuc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grDanhMuc.Name = "grDanhMuc";
-            this.grDanhMuc.Size = new System.Drawing.Size(1020, 211);
+            this.grDanhMuc.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grDanhMuc.Size = new System.Drawing.Size(1148, 264);
             this.grDanhMuc.TabIndex = 1;
             this.grDanhMuc.TabStop = false;
             this.grDanhMuc.Text = "Danh Mục";
             // 
-            // mskNgayLapDat
+            // dtpNgayLapDat
             // 
-            this.mskNgayLapDat.Location = new System.Drawing.Point(626, 87);
-            this.mskNgayLapDat.Mask = "00/00/0000";
-            this.mskNgayLapDat.Name = "mskNgayLapDat";
-            this.mskNgayLapDat.Size = new System.Drawing.Size(169, 22);
-            this.mskNgayLapDat.TabIndex = 2;
-            this.mskNgayLapDat.ValidatingType = typeof(System.DateTime);
+            this.dtpNgayLapDat.CalendarFont = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayLapDat.Location = new System.Drawing.Point(704, 108);
+            this.dtpNgayLapDat.Name = "dtpNgayLapDat";
+            this.dtpNgayLapDat.Size = new System.Drawing.Size(305, 25);
+            this.dtpNgayLapDat.TabIndex = 4;
             // 
-            // txtChiSo
+            // txtMaNV
             // 
-            this.txtChiSo.Location = new System.Drawing.Point(626, 140);
-            this.txtChiSo.Name = "txtChiSo";
-            this.txtChiSo.Size = new System.Drawing.Size(169, 22);
-            this.txtChiSo.TabIndex = 1;
+            this.txtMaNV.FormattingEnabled = true;
+            this.txtMaNV.Location = new System.Drawing.Point(230, 172);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(258, 28);
+            this.txtMaNV.TabIndex = 3;
+            // 
+            // txtMaKH
+            // 
+            this.txtMaKH.FormattingEnabled = true;
+            this.txtMaKH.Location = new System.Drawing.Point(230, 109);
+            this.txtMaKH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(258, 28);
+            this.txtMaKH.TabIndex = 3;
             // 
             // txtHangSX
             // 
-            this.txtHangSX.Location = new System.Drawing.Point(626, 33);
+            this.txtHangSX.Location = new System.Drawing.Point(704, 41);
+            this.txtHangSX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHangSX.Name = "txtHangSX";
-            this.txtHangSX.Size = new System.Drawing.Size(76, 22);
+            this.txtHangSX.Size = new System.Drawing.Size(85, 25);
             this.txtHangSX.TabIndex = 1;
             // 
             // txtMaCT
             // 
-            this.txtMaCT.Location = new System.Drawing.Point(204, 39);
+            this.txtMaCT.Location = new System.Drawing.Point(230, 49);
+            this.txtMaCT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaCT.Name = "txtMaCT";
-            this.txtMaCT.Size = new System.Drawing.Size(230, 22);
+            this.txtMaCT.Size = new System.Drawing.Size(258, 25);
             this.txtMaCT.TabIndex = 1;
-            // 
-            // lbChiSo
-            // 
-            this.lbChiSo.AutoSize = true;
-            this.lbChiSo.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChiSo.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbChiSo.Location = new System.Drawing.Point(527, 140);
-            this.lbChiSo.Name = "lbChiSo";
-            this.lbChiSo.Size = new System.Drawing.Size(58, 19);
-            this.lbChiSo.TabIndex = 0;
-            this.lbChiSo.Text = "Chỉ Số";
             // 
             // lbMaNV
             // 
             this.lbMaNV.AutoSize = true;
             this.lbMaNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaNV.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbMaNV.Location = new System.Drawing.Point(15, 141);
+            this.lbMaNV.Location = new System.Drawing.Point(17, 176);
             this.lbMaNV.Name = "lbMaNV";
-            this.lbMaNV.Size = new System.Drawing.Size(174, 19);
+            this.lbMaNV.Size = new System.Drawing.Size(217, 24);
             this.lbMaNV.TabIndex = 0;
             this.lbMaNV.Text = "Mã Nhân Viên Lắp Đặt";
-            this.lbMaNV.Click += new System.EventHandler(this.lbDiaChi_Click);
             // 
             // lbHangSX
             // 
             this.lbHangSX.AutoSize = true;
             this.lbHangSX.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHangSX.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbHangSX.Location = new System.Drawing.Point(502, 36);
+            this.lbHangSX.Location = new System.Drawing.Point(565, 45);
             this.lbHangSX.Name = "lbHangSX";
-            this.lbHangSX.Size = new System.Drawing.Size(108, 19);
+            this.lbHangSX.Size = new System.Drawing.Size(136, 24);
             this.lbHangSX.TabIndex = 0;
             this.lbHangSX.Text = "Hãn Sản Xuất";
             // 
@@ -149,18 +147,18 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbNgayLapDat.AutoSize = true;
             this.lbNgayLapDat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNgayLapDat.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbNgayLapDat.Location = new System.Drawing.Point(502, 85);
+            this.lbNgayLapDat.Location = new System.Drawing.Point(565, 106);
             this.lbNgayLapDat.Name = "lbNgayLapDat";
-            this.lbNgayLapDat.Size = new System.Drawing.Size(108, 19);
+            this.lbNgayLapDat.Size = new System.Drawing.Size(136, 24);
             this.lbNgayLapDat.TabIndex = 0;
             this.lbNgayLapDat.Text = "Ngày Lắp Đặt";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(527, 87);
+            this.label6.Location = new System.Drawing.Point(593, 109);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 17);
+            this.label6.Size = new System.Drawing.Size(57, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "label1";
             // 
@@ -169,9 +167,9 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbMaKH.AutoSize = true;
             this.lbMaKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaKH.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbMaKH.Location = new System.Drawing.Point(25, 90);
+            this.lbMaKH.Location = new System.Drawing.Point(28, 112);
             this.lbMaKH.Name = "lbMaKH";
-            this.lbMaKH.Size = new System.Drawing.Size(126, 19);
+            this.lbMaKH.Size = new System.Drawing.Size(159, 24);
             this.lbMaKH.TabIndex = 0;
             this.lbMaKH.Text = "Mã Khách Hàng";
             // 
@@ -180,9 +178,9 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbMaCT.AutoSize = true;
             this.lbMaCT.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaCT.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbMaCT.Location = new System.Drawing.Point(43, 39);
+            this.lbMaCT.Location = new System.Drawing.Point(48, 49);
             this.lbMaCT.Name = "lbMaCT";
-            this.lbMaCT.Size = new System.Drawing.Size(99, 19);
+            this.lbMaCT.Size = new System.Drawing.Size(123, 24);
             this.lbMaCT.TabIndex = 0;
             this.lbMaCT.Text = "Mã Công Tơ";
             // 
@@ -195,9 +193,11 @@ namespace QuanLyThuPhiCapNuocsach
             this.grChucNang.Controls.Add(this.btnXoaCT);
             this.grChucNang.Controls.Add(this.btnSuaCT);
             this.grChucNang.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grChucNang.Location = new System.Drawing.Point(62, 266);
+            this.grChucNang.Location = new System.Drawing.Point(70, 332);
+            this.grChucNang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grChucNang.Name = "grChucNang";
-            this.grChucNang.Size = new System.Drawing.Size(1020, 89);
+            this.grChucNang.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grChucNang.Size = new System.Drawing.Size(1148, 111);
             this.grChucNang.TabIndex = 2;
             this.grChucNang.TabStop = false;
             this.grChucNang.Text = "Chức Năng";
@@ -207,83 +207,93 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnThemCT.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnThemCT.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemCT.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThemCT.Location = new System.Drawing.Point(47, 24);
+            this.btnThemCT.Location = new System.Drawing.Point(53, 30);
+            this.btnThemCT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThemCT.Name = "btnThemCT";
-            this.btnThemCT.Size = new System.Drawing.Size(104, 42);
+            this.btnThemCT.Size = new System.Drawing.Size(117, 52);
             this.btnThemCT.TabIndex = 14;
             this.btnThemCT.Text = "Thêm";
             this.btnThemCT.UseVisualStyleBackColor = false;
+            this.btnThemCT.Click += new System.EventHandler(this.btnThemCT_Click);
             // 
             // btnCloseCT
             // 
             this.btnCloseCT.BackColor = System.Drawing.Color.Transparent;
             this.btnCloseCT.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseCT.ForeColor = System.Drawing.Color.Orange;
-            this.btnCloseCT.Location = new System.Drawing.Point(881, 24);
+            this.btnCloseCT.Location = new System.Drawing.Point(991, 30);
+            this.btnCloseCT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCloseCT.Name = "btnCloseCT";
-            this.btnCloseCT.Size = new System.Drawing.Size(121, 42);
+            this.btnCloseCT.Size = new System.Drawing.Size(136, 52);
             this.btnCloseCT.TabIndex = 14;
             this.btnCloseCT.Text = "Close";
             this.btnCloseCT.UseVisualStyleBackColor = false;
-            this.btnCloseCT.Click += new System.EventHandler(this.btnCloseNV_Click);
+            this.btnCloseCT.Click += new System.EventHandler(this.btnCloseCT_Click);
             // 
             // btnRefreshCT
             // 
             this.btnRefreshCT.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRefreshCT.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefreshCT.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRefreshCT.Location = new System.Drawing.Point(561, 24);
+            this.btnRefreshCT.Location = new System.Drawing.Point(640, 30);
+            this.btnRefreshCT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRefreshCT.Name = "btnRefreshCT";
-            this.btnRefreshCT.Size = new System.Drawing.Size(98, 42);
+            this.btnRefreshCT.Size = new System.Drawing.Size(110, 52);
             this.btnRefreshCT.TabIndex = 14;
             this.btnRefreshCT.Text = "Refresh";
             this.btnRefreshCT.UseVisualStyleBackColor = false;
+            this.btnRefreshCT.Click += new System.EventHandler(this.btnRefreshCT_Click);
             // 
             // btnTimCT
             // 
             this.btnTimCT.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnTimCT.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimCT.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTimCT.Location = new System.Drawing.Point(427, 24);
+            this.btnTimCT.Location = new System.Drawing.Point(490, 30);
+            this.btnTimCT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTimCT.Name = "btnTimCT";
-            this.btnTimCT.Size = new System.Drawing.Size(98, 42);
+            this.btnTimCT.Size = new System.Drawing.Size(118, 52);
             this.btnTimCT.TabIndex = 14;
-            this.btnTimCT.Text = "Tìm Kiếm";
+            this.btnTimCT.Text = "Tìm";
             this.btnTimCT.UseVisualStyleBackColor = false;
-            this.btnTimCT.Click += new System.EventHandler(this.btnRefreshNV_Click);
+            this.btnTimCT.Click += new System.EventHandler(this.btnRefreshCT_Click);
             // 
             // btnXoaCT
             // 
             this.btnXoaCT.BackColor = System.Drawing.Color.Transparent;
             this.btnXoaCT.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaCT.ForeColor = System.Drawing.Color.Red;
-            this.btnXoaCT.Location = new System.Drawing.Point(302, 24);
+            this.btnXoaCT.Location = new System.Drawing.Point(340, 30);
+            this.btnXoaCT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoaCT.Name = "btnXoaCT";
-            this.btnXoaCT.Size = new System.Drawing.Size(94, 42);
+            this.btnXoaCT.Size = new System.Drawing.Size(106, 52);
             this.btnXoaCT.TabIndex = 14;
             this.btnXoaCT.Text = "Xóa";
             this.btnXoaCT.UseVisualStyleBackColor = false;
+            this.btnXoaCT.Click += new System.EventHandler(this.btnXoaCT_Click);
             // 
             // btnSuaCT
             // 
             this.btnSuaCT.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSuaCT.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaCT.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSuaCT.Location = new System.Drawing.Point(175, 24);
+            this.btnSuaCT.Location = new System.Drawing.Point(197, 30);
+            this.btnSuaCT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSuaCT.Name = "btnSuaCT";
-            this.btnSuaCT.Size = new System.Drawing.Size(97, 42);
+            this.btnSuaCT.Size = new System.Drawing.Size(109, 52);
             this.btnSuaCT.TabIndex = 14;
             this.btnSuaCT.Text = "Sửa";
             this.btnSuaCT.UseVisualStyleBackColor = false;
+            this.btnSuaCT.Click += new System.EventHandler(this.btnSuaCT_Click);
             // 
             // lbChiTietCT
             // 
             this.lbChiTietCT.AutoSize = true;
             this.lbChiTietCT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChiTietCT.ForeColor = System.Drawing.Color.Red;
-            this.lbChiTietCT.Location = new System.Drawing.Point(58, 381);
+            this.lbChiTietCT.Location = new System.Drawing.Point(65, 476);
             this.lbChiTietCT.Name = "lbChiTietCT";
-            this.lbChiTietCT.Size = new System.Drawing.Size(205, 23);
+            this.lbChiTietCT.Size = new System.Drawing.Size(249, 26);
             this.lbChiTietCT.TabIndex = 16;
             this.lbChiTietCT.Text = "Bảng Chi Tiết Công Tơ";
             // 
@@ -291,41 +301,27 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             this.dgrChiTietCT.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgrChiTietCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrChiTietCT.Location = new System.Drawing.Point(62, 407);
+            this.dgrChiTietCT.Location = new System.Drawing.Point(70, 509);
+            this.dgrChiTietCT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgrChiTietCT.Name = "dgrChiTietCT";
             this.dgrChiTietCT.RowHeadersWidth = 51;
             this.dgrChiTietCT.RowTemplate.Height = 24;
-            this.dgrChiTietCT.Size = new System.Drawing.Size(1020, 294);
+            this.dgrChiTietCT.Size = new System.Drawing.Size(1148, 368);
             this.dgrChiTietCT.TabIndex = 17;
-            // 
-            // cbMaKH
-            // 
-            this.cbMaKH.FormattingEnabled = true;
-            this.cbMaKH.Location = new System.Drawing.Point(204, 87);
-            this.cbMaKH.Name = "cbMaKH";
-            this.cbMaKH.Size = new System.Drawing.Size(230, 24);
-            this.cbMaKH.TabIndex = 3;
-            this.cbMaKH.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // cbMaNV
-            // 
-            this.cbMaNV.FormattingEnabled = true;
-            this.cbMaNV.Location = new System.Drawing.Point(204, 138);
-            this.cbMaNV.Name = "cbMaNV";
-            this.cbMaNV.Size = new System.Drawing.Size(230, 24);
-            this.cbMaNV.TabIndex = 3;
             // 
             // QuanLyCongTo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 725);
+            this.ClientSize = new System.Drawing.Size(1307, 906);
             this.Controls.Add(this.dgrChiTietCT);
             this.Controls.Add(this.lbChiTietCT);
             this.Controls.Add(this.grChucNang);
             this.Controls.Add(this.grDanhMuc);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "QuanLyCongTo";
-            this.Text = "Form1";
+            this.Text = "Quản Lý Công Tơ";
+            this.Load += new System.EventHandler(this.QuanLyCongTo_Load);
             this.grDanhMuc.ResumeLayout(false);
             this.grDanhMuc.PerformLayout();
             this.grChucNang.ResumeLayout(false);
@@ -338,11 +334,8 @@ namespace QuanLyThuPhiCapNuocsach
         #endregion
 
         private System.Windows.Forms.GroupBox grDanhMuc;
-        private System.Windows.Forms.MaskedTextBox mskNgayLapDat;
-        private System.Windows.Forms.TextBox txtChiSo;
         private System.Windows.Forms.TextBox txtHangSX;
         private System.Windows.Forms.TextBox txtMaCT;
-        private System.Windows.Forms.Label lbChiSo;
         private System.Windows.Forms.Label lbMaNV;
         private System.Windows.Forms.Label lbHangSX;
         private System.Windows.Forms.Label lbNgayLapDat;
@@ -358,7 +351,8 @@ namespace QuanLyThuPhiCapNuocsach
         private System.Windows.Forms.Button btnRefreshCT;
         private System.Windows.Forms.Label lbChiTietCT;
         private System.Windows.Forms.DataGridView dgrChiTietCT;
-        private System.Windows.Forms.ComboBox cbMaNV;
-        private System.Windows.Forms.ComboBox cbMaKH;
+        private System.Windows.Forms.ComboBox txtMaNV;
+        private System.Windows.Forms.ComboBox txtMaKH;
+        private System.Windows.Forms.DateTimePicker dtpNgayLapDat;
     }
 }
