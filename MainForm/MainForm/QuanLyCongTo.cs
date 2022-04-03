@@ -1,12 +1,5 @@
 ﻿using QuanLyThuPhiCapNuocsach.BUS;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyThuPhiCapNuocsach
@@ -30,11 +23,11 @@ namespace QuanLyThuPhiCapNuocsach
             txtHangSX.DataBindings.Clear();
             txtHangSX.DataBindings.Add(new Binding("Text", dgrChiTietCT.DataSource, "sHangSX", true, DataSourceUpdateMode.Never));
            
-            txtMaKH.DataBindings.Clear();
-            txtMaKH.DataBindings.Add(new Binding("Text", dgrChiTietCT.DataSource, "sMaKH", true, DataSourceUpdateMode.Never));
+            cbMaKH.DataBindings.Clear();
+            cbMaKH.DataBindings.Add(new Binding("Text", dgrChiTietCT.DataSource, "sMaKH", true, DataSourceUpdateMode.Never));
            
-            txtMaNV.DataBindings.Clear();
-            txtMaNV.DataBindings.Add(new Binding("Text", dgrChiTietCT.DataSource, "sMaNV", true, DataSourceUpdateMode.Never));
+            cbMaNV.DataBindings.Clear();
+            cbMaNV.DataBindings.Add(new Binding("Text", dgrChiTietCT.DataSource, "sMaNV", true, DataSourceUpdateMode.Never));
             
            
         }
@@ -49,10 +42,11 @@ namespace QuanLyThuPhiCapNuocsach
         {
             if (txtMaCT.Text.Trim() == "")
                 MessageBox.Show("Mã Công Tơ không được để trống !");
-            else if (txtMaKH.Text.Trim() == "")
+            else if (cbMaKH.Text.Trim() == "")
                 MessageBox.Show("Mã Khách không được để trống !");
             else
-                ctb.insertCT(txtMaCT.Text, dtpNgayLapDat.Value.ToString("yyyy/MM/dd"), txtHangSX.Text, txtMaKH.Text, txtMaNV.Text );
+                ctb.insertCT(txtMaCT.Text, dtpNgayLapDat.Value.ToString("yyyy/MM/dd"), txtHangSX.Text, cbMaKH.Text, cbMaNV.Text );
+            QuanLyCongTo_Load(sender, e);
         }
 
        
@@ -65,10 +59,10 @@ namespace QuanLyThuPhiCapNuocsach
                 {
                     if (txtMaCT.Text.Trim() == "")
                         MessageBox.Show("Mã nhân viên không được để trống !");
-                    else if (txtMaKH.Text.Trim() == "")
+                    else if (cbMaKH.Text.Trim() == "")
                         MessageBox.Show("Tên nhân viên không được để trống !");
                     else
-                        ctb.updateCT(txtMaCT.Text, dtpNgayLapDat.Value.ToString("yyyy-MM-dd"), txtHangSX.Text, txtMaKH.Text, txtMaNV.Text);
+                        ctb.updateCT(txtMaCT.Text, dtpNgayLapDat.Value.ToString("yyyy/MM/dd"), txtHangSX.Text, cbMaKH.Text, cbMaNV.Text);
                     QuanLyCongTo_Load(sender, e);
                 }
             }
@@ -97,9 +91,9 @@ namespace QuanLyThuPhiCapNuocsach
         private void btnRefreshCT_Click(object sender, EventArgs e)
         {
             txtMaCT.Text = " ";
-            txtMaKH.Text = " ";
+            cbMaKH.Text = " ";
             txtHangSX.Text = " ";
-            txtMaNV.Text = " ";
+            cbMaNV.Text = " ";
         }
 
         private void btnCloseCT_Click(object sender, EventArgs e)
@@ -112,6 +106,10 @@ namespace QuanLyThuPhiCapNuocsach
         {
             LoadListCT();
             BindingData();
+            cbMaKH.DisplayMember = "sMaKH";
+            cbMaKH.DataSource = ctb.getKH();
+            cbMaNV.DisplayMember = "sMaNV";
+            cbMaNV.DataSource = ctb.getMaNV();
         }
 
         private void btnInCT_Click(object sender, EventArgs e)
@@ -121,6 +119,11 @@ namespace QuanLyThuPhiCapNuocsach
             frmReportCT f = new frmReportCT();
             f.crystalReportViewer2.ReportSource = rptCongTo;
             f.ShowDialog();
+        }
+
+        private void btnTimCT_Click(object sender, EventArgs e)
+        {
+            dgrChiTietCT.DataSource = ctb.Search(txtMaCT.Text);
         }
     }
 }

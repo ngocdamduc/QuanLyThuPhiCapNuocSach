@@ -31,8 +31,8 @@ namespace QuanLyThuPhiCapNuocsach
         {
             this.grDanhMuc = new System.Windows.Forms.GroupBox();
             this.dtpNgayLapDat = new System.Windows.Forms.DateTimePicker();
-            this.txtMaNV = new System.Windows.Forms.ComboBox();
-            this.txtMaKH = new System.Windows.Forms.ComboBox();
+            this.cbMaNV = new System.Windows.Forms.ComboBox();
+            this.cbMaKH = new System.Windows.Forms.ComboBox();
             this.txtHangSX = new System.Windows.Forms.TextBox();
             this.txtMaCT = new System.Windows.Forms.TextBox();
             this.lbMaNV = new System.Windows.Forms.Label();
@@ -42,15 +42,15 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbMaKH = new System.Windows.Forms.Label();
             this.lbMaCT = new System.Windows.Forms.Label();
             this.grChucNang = new System.Windows.Forms.GroupBox();
+            this.btnTimCT = new System.Windows.Forms.Button();
+            this.btnInCT = new System.Windows.Forms.Button();
             this.btnThemCT = new System.Windows.Forms.Button();
             this.btnCloseCT = new System.Windows.Forms.Button();
             this.btnRefreshCT = new System.Windows.Forms.Button();
-            this.btnTimCT = new System.Windows.Forms.Button();
             this.btnXoaCT = new System.Windows.Forms.Button();
             this.btnSuaCT = new System.Windows.Forms.Button();
             this.lbChiTietCT = new System.Windows.Forms.Label();
             this.dgrChiTietCT = new System.Windows.Forms.DataGridView();
-            this.btnInCT = new System.Windows.Forms.Button();
             this.grDanhMuc.SuspendLayout();
             this.grChucNang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrChiTietCT)).BeginInit();
@@ -59,8 +59,8 @@ namespace QuanLyThuPhiCapNuocsach
             // grDanhMuc
             // 
             this.grDanhMuc.Controls.Add(this.dtpNgayLapDat);
-            this.grDanhMuc.Controls.Add(this.txtMaNV);
-            this.grDanhMuc.Controls.Add(this.txtMaKH);
+            this.grDanhMuc.Controls.Add(this.cbMaNV);
+            this.grDanhMuc.Controls.Add(this.cbMaKH);
             this.grDanhMuc.Controls.Add(this.txtHangSX);
             this.grDanhMuc.Controls.Add(this.txtMaCT);
             this.grDanhMuc.Controls.Add(this.lbMaNV);
@@ -83,24 +83,24 @@ namespace QuanLyThuPhiCapNuocsach
             this.dtpNgayLapDat.Location = new System.Drawing.Point(626, 86);
             this.dtpNgayLapDat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpNgayLapDat.Name = "dtpNgayLapDat";
-            this.dtpNgayLapDat.Size = new System.Drawing.Size(272, 22);
+            this.dtpNgayLapDat.Size = new System.Drawing.Size(207, 22);
             this.dtpNgayLapDat.TabIndex = 4;
             // 
-            // txtMaNV
+            // cbMaNV
             // 
-            this.txtMaNV.FormattingEnabled = true;
-            this.txtMaNV.Location = new System.Drawing.Point(204, 138);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(230, 24);
-            this.txtMaNV.TabIndex = 3;
+            this.cbMaNV.FormattingEnabled = true;
+            this.cbMaNV.Location = new System.Drawing.Point(204, 138);
+            this.cbMaNV.Name = "cbMaNV";
+            this.cbMaNV.Size = new System.Drawing.Size(230, 24);
+            this.cbMaNV.TabIndex = 3;
             // 
-            // txtMaKH
+            // cbMaKH
             // 
-            this.txtMaKH.FormattingEnabled = true;
-            this.txtMaKH.Location = new System.Drawing.Point(204, 87);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(230, 24);
-            this.txtMaKH.TabIndex = 3;
+            this.cbMaKH.FormattingEnabled = true;
+            this.cbMaKH.Location = new System.Drawing.Point(204, 87);
+            this.cbMaKH.Name = "cbMaKH";
+            this.cbMaKH.Size = new System.Drawing.Size(230, 24);
+            this.cbMaKH.TabIndex = 3;
             // 
             // txtHangSX
             // 
@@ -182,11 +182,11 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             // grChucNang
             // 
+            this.grChucNang.Controls.Add(this.btnTimCT);
             this.grChucNang.Controls.Add(this.btnInCT);
             this.grChucNang.Controls.Add(this.btnThemCT);
             this.grChucNang.Controls.Add(this.btnCloseCT);
             this.grChucNang.Controls.Add(this.btnRefreshCT);
-            this.grChucNang.Controls.Add(this.btnTimCT);
             this.grChucNang.Controls.Add(this.btnXoaCT);
             this.grChucNang.Controls.Add(this.btnSuaCT);
             this.grChucNang.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -196,6 +196,26 @@ namespace QuanLyThuPhiCapNuocsach
             this.grChucNang.TabIndex = 2;
             this.grChucNang.TabStop = false;
             this.grChucNang.Text = "Chức Năng";
+            // 
+            // btnTimCT
+            // 
+            this.btnTimCT.Location = new System.Drawing.Point(438, 24);
+            this.btnTimCT.Name = "btnTimCT";
+            this.btnTimCT.Size = new System.Drawing.Size(104, 42);
+            this.btnTimCT.TabIndex = 16;
+            this.btnTimCT.Text = "Tìm";
+            this.btnTimCT.UseVisualStyleBackColor = true;
+            this.btnTimCT.Click += new System.EventHandler(this.btnTimCT_Click);
+            // 
+            // btnInCT
+            // 
+            this.btnInCT.Location = new System.Drawing.Point(574, 25);
+            this.btnInCT.Name = "btnInCT";
+            this.btnInCT.Size = new System.Drawing.Size(101, 42);
+            this.btnInCT.TabIndex = 15;
+            this.btnInCT.Text = "In";
+            this.btnInCT.UseVisualStyleBackColor = true;
+            this.btnInCT.Click += new System.EventHandler(this.btnInCT_Click);
             // 
             // btnThemCT
             // 
@@ -235,19 +255,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnRefreshCT.Text = "Refresh";
             this.btnRefreshCT.UseVisualStyleBackColor = false;
             this.btnRefreshCT.Click += new System.EventHandler(this.btnRefreshCT_Click);
-            // 
-            // btnTimCT
-            // 
-            this.btnTimCT.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTimCT.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimCT.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTimCT.Location = new System.Drawing.Point(436, 24);
-            this.btnTimCT.Name = "btnTimCT";
-            this.btnTimCT.Size = new System.Drawing.Size(105, 42);
-            this.btnTimCT.TabIndex = 14;
-            this.btnTimCT.Text = "Tìm";
-            this.btnTimCT.UseVisualStyleBackColor = false;
-            this.btnTimCT.Click += new System.EventHandler(this.btnRefreshCT_Click);
             // 
             // btnXoaCT
             // 
@@ -297,16 +304,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.dgrChiTietCT.Size = new System.Drawing.Size(1020, 294);
             this.dgrChiTietCT.TabIndex = 17;
             // 
-            // btnInCT
-            // 
-            this.btnInCT.Location = new System.Drawing.Point(574, 25);
-            this.btnInCT.Name = "btnInCT";
-            this.btnInCT.Size = new System.Drawing.Size(101, 42);
-            this.btnInCT.TabIndex = 15;
-            this.btnInCT.Text = "In";
-            this.btnInCT.UseVisualStyleBackColor = true;
-            this.btnInCT.Click += new System.EventHandler(this.btnInCT_Click);
-            // 
             // QuanLyCongTo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -342,15 +339,15 @@ namespace QuanLyThuPhiCapNuocsach
         private System.Windows.Forms.GroupBox grChucNang;
         private System.Windows.Forms.Button btnThemCT;
         private System.Windows.Forms.Button btnCloseCT;
-        private System.Windows.Forms.Button btnTimCT;
         private System.Windows.Forms.Button btnXoaCT;
         private System.Windows.Forms.Button btnSuaCT;
         private System.Windows.Forms.Button btnRefreshCT;
         private System.Windows.Forms.Label lbChiTietCT;
         private System.Windows.Forms.DataGridView dgrChiTietCT;
-        private System.Windows.Forms.ComboBox txtMaNV;
-        private System.Windows.Forms.ComboBox txtMaKH;
+        private System.Windows.Forms.ComboBox cbMaNV;
+        private System.Windows.Forms.ComboBox cbMaKH;
         private System.Windows.Forms.DateTimePicker dtpNgayLapDat;
         private System.Windows.Forms.Button btnInCT;
+        private System.Windows.Forms.Button btnTimCT;
     }
 }

@@ -240,7 +240,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.dtpNgaySinh.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgaySinh.Location = new System.Drawing.Point(626, 90);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 22);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(169, 22);
             this.dtpNgaySinh.TabIndex = 2;
             // 
             // txtDiaChi
@@ -327,7 +327,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(527, 87);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 16);
+            this.label6.Size = new System.Drawing.Size(52, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "label1";
             // 
