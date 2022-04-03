@@ -16,7 +16,7 @@ namespace QuanLyThuPhiCapNuocsach.BUS
             da = dt.GetTable(sql);
             return da;
         }
-        public void insertNV(String manv, String tennv, String diachi, String gioitinh, String ngaysinh, String chucvu)
+        public void insertNV(string manv, string tennv, string diachi, string gioitinh, string ngaysinh, string chucvu)
         {
             String sql = " INSERT INTO tbl_NhanVien VALUES('" + manv + "',N'" + tennv + "',N'" + diachi + "',N'" + gioitinh + "','" + ngaysinh + "',N'" + chucvu + "')";
             try
@@ -30,7 +30,7 @@ namespace QuanLyThuPhiCapNuocsach.BUS
                 MessageBox.Show(ex.Message);
             }
         }
-        public void updateNV(String manv, String tennv, String diachi, String gioitinh, String ngaysinh, String chucvu)
+        public void updateNV(string manv, string tennv, string diachi, string gioitinh, string ngaysinh, string chucvu)
         {
             String sql = "UPDATE tbl_NhanVien SET sMaNV = '" + manv + "',sTenNV=N'" + tennv + "',sDiachi=N'" + diachi + "',bGioitinh=N'" + gioitinh + "',dNgaySinh='" + ngaysinh + "',sChucVu=N'" + chucvu + "' where sMaNV='" + manv + "'";
             try
@@ -44,7 +44,7 @@ namespace QuanLyThuPhiCapNuocsach.BUS
                 MessageBox.Show(ex.Message);
             }
         }
-        public void deleteNV(String manv)
+        public void deleteNV(string manv)
         {
             String sql = "DELETE tbl_NhanVien where sMaNV='" + manv + "'";
             try
@@ -57,7 +57,7 @@ namespace QuanLyThuPhiCapNuocsach.BUS
                 MessageBox.Show("Có lỗi khi kết nối tới hệ thống !" + ex.Message);
             }
         }
-        public DataTable Search(String condition)
+        public DataTable Search(string condition)
         {
             DataTable da = null;
             String sql = "SELECT * FROM tbl_NhanVien WHERE sMaNV LIKE N'%" + condition + "%' OR sTenNV LIKE N'%" + condition + "%'";

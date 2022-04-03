@@ -1,22 +1,21 @@
-﻿using System;
-namespace QuanLyThuPhiCapNuocsach.DTO
+﻿namespace QuanLyThuPhiCapNuocsach.DTO
 {
     public class User_DTO
     {
-        String username;
-        String password;
-        String maNV;
-        public String Usernamae
+        string username;
+        string password;
+        string maNV;
+        public string Usernamae
         {
             get { return username; }
             set { username = value; }
         }
-        public String Password
+        public string Password
         {
             get { return password; }
             set { password = value; }
         }
-        public String MaNV
+        public string MaNV
         {
             get { return maNV; }
             set { maNV = value; }

@@ -31,8 +31,6 @@ namespace QuanLyThuPhiCapNuocsach
         {
             this.grDanhMuc = new System.Windows.Forms.GroupBox();
             this.mskNgayLapDat = new System.Windows.Forms.MaskedTextBox();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
-            this.txtMaKH = new System.Windows.Forms.TextBox();
             this.txtChiSo = new System.Windows.Forms.TextBox();
             this.txtHangSX = new System.Windows.Forms.TextBox();
             this.txtMaCT = new System.Windows.Forms.TextBox();
@@ -46,12 +44,14 @@ namespace QuanLyThuPhiCapNuocsach
             this.grChucNang = new System.Windows.Forms.GroupBox();
             this.btnThemCT = new System.Windows.Forms.Button();
             this.btnCloseCT = new System.Windows.Forms.Button();
+            this.btnRefreshCT = new System.Windows.Forms.Button();
             this.btnTimCT = new System.Windows.Forms.Button();
             this.btnXoaCT = new System.Windows.Forms.Button();
             this.btnSuaCT = new System.Windows.Forms.Button();
             this.lbChiTietCT = new System.Windows.Forms.Label();
-            this.btnRefreshCT = new System.Windows.Forms.Button();
             this.dgrChiTietCT = new System.Windows.Forms.DataGridView();
+            this.cbMaKH = new System.Windows.Forms.ComboBox();
+            this.cbMaNV = new System.Windows.Forms.ComboBox();
             this.grDanhMuc.SuspendLayout();
             this.grChucNang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrChiTietCT)).BeginInit();
@@ -59,9 +59,9 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             // grDanhMuc
             // 
+            this.grDanhMuc.Controls.Add(this.cbMaNV);
+            this.grDanhMuc.Controls.Add(this.cbMaKH);
             this.grDanhMuc.Controls.Add(this.mskNgayLapDat);
-            this.grDanhMuc.Controls.Add(this.txtMaNV);
-            this.grDanhMuc.Controls.Add(this.txtMaKH);
             this.grDanhMuc.Controls.Add(this.txtChiSo);
             this.grDanhMuc.Controls.Add(this.txtHangSX);
             this.grDanhMuc.Controls.Add(this.txtMaCT);
@@ -88,21 +88,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.mskNgayLapDat.Size = new System.Drawing.Size(169, 22);
             this.mskNgayLapDat.TabIndex = 2;
             this.mskNgayLapDat.ValidatingType = typeof(System.DateTime);
-            // 
-            // txtMaNV
-            // 
-            this.txtMaNV.Location = new System.Drawing.Point(204, 140);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(230, 22);
-            this.txtMaNV.TabIndex = 1;
-            this.txtMaNV.TextChanged += new System.EventHandler(this.txtDiaChi_TextChanged);
-            // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Location = new System.Drawing.Point(204, 87);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(230, 22);
-            this.txtMaKH.TabIndex = 1;
             // 
             // txtChiSo
             // 
@@ -242,6 +227,18 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnCloseCT.UseVisualStyleBackColor = false;
             this.btnCloseCT.Click += new System.EventHandler(this.btnCloseNV_Click);
             // 
+            // btnRefreshCT
+            // 
+            this.btnRefreshCT.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRefreshCT.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefreshCT.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnRefreshCT.Location = new System.Drawing.Point(561, 24);
+            this.btnRefreshCT.Name = "btnRefreshCT";
+            this.btnRefreshCT.Size = new System.Drawing.Size(98, 42);
+            this.btnRefreshCT.TabIndex = 14;
+            this.btnRefreshCT.Text = "Refresh";
+            this.btnRefreshCT.UseVisualStyleBackColor = false;
+            // 
             // btnTimCT
             // 
             this.btnTimCT.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -290,18 +287,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbChiTietCT.TabIndex = 16;
             this.lbChiTietCT.Text = "Bảng Chi Tiết Công Tơ";
             // 
-            // btnRefreshCT
-            // 
-            this.btnRefreshCT.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRefreshCT.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshCT.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRefreshCT.Location = new System.Drawing.Point(561, 24);
-            this.btnRefreshCT.Name = "btnRefreshCT";
-            this.btnRefreshCT.Size = new System.Drawing.Size(98, 42);
-            this.btnRefreshCT.TabIndex = 14;
-            this.btnRefreshCT.Text = "Refresh";
-            this.btnRefreshCT.UseVisualStyleBackColor = false;
-            // 
             // dgrChiTietCT
             // 
             this.dgrChiTietCT.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -312,6 +297,23 @@ namespace QuanLyThuPhiCapNuocsach
             this.dgrChiTietCT.RowTemplate.Height = 24;
             this.dgrChiTietCT.Size = new System.Drawing.Size(1020, 294);
             this.dgrChiTietCT.TabIndex = 17;
+            // 
+            // cbMaKH
+            // 
+            this.cbMaKH.FormattingEnabled = true;
+            this.cbMaKH.Location = new System.Drawing.Point(204, 87);
+            this.cbMaKH.Name = "cbMaKH";
+            this.cbMaKH.Size = new System.Drawing.Size(230, 24);
+            this.cbMaKH.TabIndex = 3;
+            this.cbMaKH.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // cbMaNV
+            // 
+            this.cbMaNV.FormattingEnabled = true;
+            this.cbMaNV.Location = new System.Drawing.Point(204, 138);
+            this.cbMaNV.Name = "cbMaNV";
+            this.cbMaNV.Size = new System.Drawing.Size(230, 24);
+            this.cbMaNV.TabIndex = 3;
             // 
             // QuanLyCongTo
             // 
@@ -337,8 +339,6 @@ namespace QuanLyThuPhiCapNuocsach
 
         private System.Windows.Forms.GroupBox grDanhMuc;
         private System.Windows.Forms.MaskedTextBox mskNgayLapDat;
-        private System.Windows.Forms.TextBox txtMaNV;
-        private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.TextBox txtChiSo;
         private System.Windows.Forms.TextBox txtHangSX;
         private System.Windows.Forms.TextBox txtMaCT;
@@ -358,5 +358,7 @@ namespace QuanLyThuPhiCapNuocsach
         private System.Windows.Forms.Button btnRefreshCT;
         private System.Windows.Forms.Label lbChiTietCT;
         private System.Windows.Forms.DataGridView dgrChiTietCT;
+        private System.Windows.Forms.ComboBox cbMaNV;
+        private System.Windows.Forms.ComboBox cbMaKH;
     }
 }
