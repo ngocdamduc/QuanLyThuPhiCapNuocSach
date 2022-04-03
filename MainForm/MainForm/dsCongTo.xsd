@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet2" msprop:Generator_UserDSName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCongTo" msprop:Generator_TableClassName="dtCongToDataTable" msprop:Generator_TableVarName="tabledtCongTo" msprop:Generator_TablePropName="dtCongTo" msprop:Generator_RowDeletingName="dtCongToRowDeleting" msprop:Generator_RowChangingName="dtCongToRowChanging" msprop:Generator_RowEvHandlerName="dtCongToRowChangeEventHandler" msprop:Generator_RowDeletedName="dtCongToRowDeleted" msprop:Generator_UserTableName="dtCongTo" msprop:Generator_RowChangedName="dtCongToRowChanged" msprop:Generator_RowEvArgName="dtCongToRowChangeEvent" msprop:Generator_RowClassName="dtCongToRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sMaCT" msprop:Generator_ColumnVarNameInTable="columnsMaCT" msprop:Generator_ColumnPropNameInRow="sMaCT" msprop:Generator_ColumnPropNameInTable="sMaCTColumn" msprop:Generator_UserColumnName="sMaCT" type="xs:string" minOccurs="0" />
+              <xs:element name="dNgayLapDat" msprop:Generator_ColumnVarNameInTable="columndNgayLapDat" msprop:Generator_ColumnPropNameInRow="dNgayLapDat" msprop:Generator_ColumnPropNameInTable="dNgayLapDatColumn" msprop:Generator_UserColumnName="dNgayLapDat" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sHangSX" msprop:Generator_ColumnVarNameInTable="columnsHangSX" msprop:Generator_ColumnPropNameInRow="sHangSX" msprop:Generator_ColumnPropNameInTable="sHangSXColumn" msprop:Generator_UserColumnName="sHangSX" type="xs:string" minOccurs="0" />
+              <xs:element name="sMaKH" msprop:Generator_ColumnVarNameInTable="columnsMaKH" msprop:Generator_ColumnPropNameInRow="sMaKH" msprop:Generator_ColumnPropNameInTable="sMaKHColumn" msprop:Generator_UserColumnName="sMaKH" type="xs:string" minOccurs="0" />
+              <xs:element name="sMaNV" msprop:Generator_ColumnVarNameInTable="columnsMaNV" msprop:Generator_ColumnPropNameInRow="sMaNV" msprop:Generator_ColumnPropNameInTable="sMaNVColumn" msprop:Generator_UserColumnName="sMaNV" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

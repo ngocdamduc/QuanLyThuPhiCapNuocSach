@@ -120,11 +120,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\CongTo_BUS.cs" />
     <Compile Include="BUS\HoaDon_BUS.cs" />
     <Compile Include="BUS\KhachHang_BUS.cs" />
     <Compile Include="BUS\NhanVien_BUS.cs" />
     <Compile Include="BUS\User_BUS.cs" />
+    <Compile Include="frmReportCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportCT.Designer.cs">
+      <DependentUpon>frmReportCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptCongTo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCongTo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="dsCongTo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCongTo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsNhanVien.cs">
       <DependentUpon>dsNhanVien.xsd</DependentUpon>
     </Compile>
@@ -191,6 +209,13 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmReportCT.resx">
+      <DependentUpon>frmReportCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCongTo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCongTo.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReportNV.resx">
       <DependentUpon>frmReportNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +254,17 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsCongTo.xsc">
+      <DependentUpon>dsCongTo.xsd</DependentUpon>
+    </None>
+    <None Include="dsCongTo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCongTo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsCongTo.xss">
+      <DependentUpon>dsCongTo.xsd</DependentUpon>
+    </None>
     <None Include="dsNhanVien.xsc">
       <DependentUpon>dsNhanVien.xsd</DependentUpon>
     </None>
