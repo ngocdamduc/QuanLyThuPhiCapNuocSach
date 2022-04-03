@@ -8,7 +8,7 @@ namespace QuanLyThuPhiCapNuocsach.DAO
     {
         public SqlConnection getConnect()
         {
-            String strConn = @"Data Source=ASUS-X507UF\SQLEXPRESS;Initial Catalog=QuanLyNuocSach;Integrated Security=True";
+            String strConn = @"Data Source=ZENBOOK14-TRANN;Initial Catalog=QuanLyNuocSach;Integrated Security=True";
             return new SqlConnection(strConn);
         }
         public DataTable GetTable(String sql)
