@@ -124,6 +124,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsNhanVien.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DTO\CongTo_DTO.cs" />
     <Compile Include="DTO\HoaDon_DTO.cs" />
     <Compile Include="DTO\NhanVien_DTO.cs" />
     <Compile Include="DTO\User_DTO.cs" />
