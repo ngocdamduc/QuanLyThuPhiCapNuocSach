@@ -29,6 +29,7 @@ namespace QuanLyThuPhiCapNuocsach
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHoaDon = new System.Windows.Forms.TabPage();
             this.dtpNgayLap = new System.Windows.Forms.DateTimePicker();
@@ -66,6 +67,8 @@ namespace QuanLyThuPhiCapNuocsach
             this.txtTimMaNV = new System.Windows.Forms.TextBox();
             this.lbTimTenNV = new System.Windows.Forms.Label();
             this.lbTimMaNV = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrChiTietHD)).BeginInit();
@@ -86,6 +89,7 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             // tabHoaDon
             // 
+            this.tabHoaDon.Controls.Add(this.button1);
             this.tabHoaDon.Controls.Add(this.dtpNgayLap);
             this.tabHoaDon.Controls.Add(this.dgrChiTietHD);
             this.tabHoaDon.Controls.Add(this.label3);
@@ -166,7 +170,7 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             this.btnRefreshHD.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRefreshHD.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshHD.Location = new System.Drawing.Point(1123, 381);
+            this.btnRefreshHD.Location = new System.Drawing.Point(1123, 432);
             this.btnRefreshHD.Name = "btnRefreshHD";
             this.btnRefreshHD.Size = new System.Drawing.Size(121, 34);
             this.btnRefreshHD.TabIndex = 22;
@@ -178,7 +182,7 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             this.btnTimKiemHD.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnTimKiemHD.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiemHD.Location = new System.Drawing.Point(1123, 307);
+            this.btnTimKiemHD.Location = new System.Drawing.Point(1123, 300);
             this.btnTimKiemHD.Name = "btnTimKiemHD";
             this.btnTimKiemHD.Size = new System.Drawing.Size(121, 37);
             this.btnTimKiemHD.TabIndex = 23;
@@ -488,6 +492,22 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbTimMaNV.TabIndex = 0;
             this.lbTimMaNV.Text = "Nhập Mã KH";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1123, 369);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 34);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "In";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // QuanLyHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -549,5 +569,7 @@ namespace QuanLyThuPhiCapNuocsach
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label lbTraCuu;
         private System.Windows.Forms.DateTimePicker dtpNgayLap;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button button1;
     }
 }
