@@ -121,7 +121,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnXoaLKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnXoaLKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaLKH.ForeColor = System.Drawing.Color.Red;
-            this.btnXoaLKH.Location = new System.Drawing.Point(954, 262);
+            this.btnXoaLKH.Location = new System.Drawing.Point(954, 275);
             this.btnXoaLKH.Name = "btnXoaLKH";
             this.btnXoaLKH.Size = new System.Drawing.Size(121, 42);
             this.btnXoaLKH.TabIndex = 14;
@@ -133,7 +133,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnSuaLKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSuaLKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaLKH.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSuaLKH.Location = new System.Drawing.Point(954, 177);
+            this.btnSuaLKH.Location = new System.Drawing.Point(954, 190);
             this.btnSuaLKH.Name = "btnSuaLKH";
             this.btnSuaLKH.Size = new System.Drawing.Size(121, 42);
             this.btnSuaLKH.TabIndex = 14;
@@ -145,7 +145,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnThemLKH.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnThemLKH.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemLKH.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThemLKH.Location = new System.Drawing.Point(954, 102);
+            this.btnThemLKH.Location = new System.Drawing.Point(954, 113);
             this.btnThemLKH.Name = "btnThemLKH";
             this.btnThemLKH.Size = new System.Drawing.Size(121, 42);
             this.btnThemLKH.TabIndex = 14;

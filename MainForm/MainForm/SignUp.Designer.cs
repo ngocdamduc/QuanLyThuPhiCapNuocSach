@@ -183,7 +183,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.Controls.Add(this.btnDangky);
             this.Controls.Add(this.btnTrolai);
             this.Name = "SignUp";
-            this.Text = "Đăng ký";
+            this.Text = "Đăng Ký Tài Khoản";
             this.Load += new System.EventHandler(this.SignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

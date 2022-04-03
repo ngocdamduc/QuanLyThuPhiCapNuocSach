@@ -125,7 +125,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.Controls.Add(this.btnDangnhap);
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SignIn";
+            this.Text = "Đăng Nhập";
             this.ResumeLayout(false);
             this.PerformLayout();
 

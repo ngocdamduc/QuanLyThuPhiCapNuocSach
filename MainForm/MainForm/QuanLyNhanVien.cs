@@ -50,7 +50,7 @@ namespace QuanLyThuPhiCapNuocsach
                     else if (txtTenNV.Text.Trim() == "")
                         MessageBox.Show("Tên nhân viên không được để trống !");
                     else
-                    nvb.updateNV(txtMaNV.Text, txtTenNV.Text, txtDiaChi.Text, txtGioiTinh.Text, dtpNgaySinh.Value.ToString("dd/MM/yyyy"), txtChucVu.Text);
+                    nvb.updateNV(txtMaNV.Text, txtTenNV.Text, txtDiaChi.Text, txtGioiTinh.Text, dtpNgaySinh.Value.ToString("yyyy-MM-dd"), txtChucVu.Text);
                     QuanLyNhanVien_Load(sender, e);
                 }
             }
@@ -111,6 +111,14 @@ namespace QuanLyThuPhiCapNuocsach
             txtDiaChi.Text = " ";
             txtGioiTinh.Text = " ";
             txtChucVu.Text = " ";
+        }
+        private void btnInNV_Click_1(object sender, EventArgs e)
+        {
+            rptNhanVien rptNhanVien = new rptNhanVien();
+            rptNhanVien.SetDataSource(nvb.getNhanVien());
+            frmReportNV f = new frmReportNV();
+            f.crystalReportViewer1.ReportSource = rptNhanVien;
+            f.ShowDialog();
         }
     }
 }
