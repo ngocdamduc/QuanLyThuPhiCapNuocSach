@@ -52,7 +52,7 @@ namespace QuanLyThuPhiCapNuocsach
             else if (txtMaKH.Text.Trim() == "")
                 MessageBox.Show("Mã Khách không được để trống !");
             else
-                //ctb.insertCT(txtMaCT.Text, dtpNgayLapDat.Value.ToString("yyyy/MM/dd"), txtHangSX.Text, txtMaKH.Text, txtMaNV.Text );
+                ctb.insertCT(txtMaCT.Text, dtpNgayLapDat.Value.ToString("yyyy/MM/dd"), txtHangSX.Text, txtMaKH.Text, txtMaNV.Text );
         }
 
        

@@ -24,7 +24,6 @@ namespace QuanLyThuPhiCapNuocsach
                 this.Close();
             }
             KhachHang_BUS nvb = new KhachHang_BUS();
-        private object txtTimTenKH;
 
         private void QuanLyKhachHang_Load(object sender, System.EventArgs e)
             {
