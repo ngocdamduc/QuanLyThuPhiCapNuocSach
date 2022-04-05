@@ -285,9 +285,9 @@ namespace QuanLyThuPhiCapNuocsach {
             
             private global::System.Data.DataColumn columnsHangSX;
             
-            private global::System.Data.DataColumn columnsMaKH;
+            private global::System.Data.DataColumn columnsTenKH;
             
-            private global::System.Data.DataColumn columnsMaNV;
+            private global::System.Data.DataColumn columnsTenNV;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -348,17 +348,17 @@ namespace QuanLyThuPhiCapNuocsach {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn sMaKHColumn {
+            public global::System.Data.DataColumn sTenKHColumn {
                 get {
-                    return this.columnsMaKH;
+                    return this.columnsTenKH;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn sMaNVColumn {
+            public global::System.Data.DataColumn sTenNVColumn {
                 get {
-                    return this.columnsMaNV;
+                    return this.columnsTenNV;
                 }
             }
             
@@ -399,14 +399,14 @@ namespace QuanLyThuPhiCapNuocsach {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dtCongToRow AdddtCongToRow(string sMaCT, System.DateTime dNgayLapDat, string sHangSX, string sMaKH, string sMaNV) {
+            public dtCongToRow AdddtCongToRow(string sMaCT, System.DateTime dNgayLapDat, string sHangSX, string sTenKH, string sTenNV) {
                 dtCongToRow rowdtCongToRow = ((dtCongToRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         sMaCT,
                         dNgayLapDat,
                         sHangSX,
-                        sMaKH,
-                        sMaNV};
+                        sTenKH,
+                        sTenNV};
                 rowdtCongToRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtCongToRow);
                 return rowdtCongToRow;
@@ -432,8 +432,8 @@ namespace QuanLyThuPhiCapNuocsach {
                 this.columnsMaCT = base.Columns["sMaCT"];
                 this.columndNgayLapDat = base.Columns["dNgayLapDat"];
                 this.columnsHangSX = base.Columns["sHangSX"];
-                this.columnsMaKH = base.Columns["sMaKH"];
-                this.columnsMaNV = base.Columns["sMaNV"];
+                this.columnsTenKH = base.Columns["sTenKH"];
+                this.columnsTenNV = base.Columns["sTenNV"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -445,10 +445,10 @@ namespace QuanLyThuPhiCapNuocsach {
                 base.Columns.Add(this.columndNgayLapDat);
                 this.columnsHangSX = new global::System.Data.DataColumn("sHangSX", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsHangSX);
-                this.columnsMaKH = new global::System.Data.DataColumn("sMaKH", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsMaKH);
-                this.columnsMaNV = new global::System.Data.DataColumn("sMaNV", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsMaNV);
+                this.columnsTenKH = new global::System.Data.DataColumn("sTenKH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsTenKH);
+                this.columnsTenNV = new global::System.Data.DataColumn("sTenNV", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsTenNV);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -639,33 +639,33 @@ namespace QuanLyThuPhiCapNuocsach {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string sMaKH {
+            public string sTenKH {
                 get {
                     try {
-                        return ((string)(this[this.tabledtCongTo.sMaKHColumn]));
+                        return ((string)(this[this.tabledtCongTo.sTenKHColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'sMaKH\' in table \'dtCongTo\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'sTenKH\' in table \'dtCongTo\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtCongTo.sMaKHColumn] = value;
+                    this[this.tabledtCongTo.sTenKHColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string sMaNV {
+            public string sTenNV {
                 get {
                     try {
-                        return ((string)(this[this.tabledtCongTo.sMaNVColumn]));
+                        return ((string)(this[this.tabledtCongTo.sTenNVColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'sMaNV\' in table \'dtCongTo\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'sTenNV\' in table \'dtCongTo\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtCongTo.sMaNVColumn] = value;
+                    this[this.tabledtCongTo.sTenNVColumn] = value;
                 }
             }
             
@@ -707,26 +707,26 @@ namespace QuanLyThuPhiCapNuocsach {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IssMaKHNull() {
-                return this.IsNull(this.tabledtCongTo.sMaKHColumn);
+            public bool IssTenKHNull() {
+                return this.IsNull(this.tabledtCongTo.sTenKHColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetsMaKHNull() {
-                this[this.tabledtCongTo.sMaKHColumn] = global::System.Convert.DBNull;
+            public void SetsTenKHNull() {
+                this[this.tabledtCongTo.sTenKHColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IssMaNVNull() {
-                return this.IsNull(this.tabledtCongTo.sMaNVColumn);
+            public bool IssTenNVNull() {
+                return this.IsNull(this.tabledtCongTo.sTenNVColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetsMaNVNull() {
-                this[this.tabledtCongTo.sMaNVColumn] = global::System.Convert.DBNull;
+            public void SetsTenNVNull() {
+                this[this.tabledtCongTo.sTenNVColumn] = global::System.Convert.DBNull;
             }
         }
         

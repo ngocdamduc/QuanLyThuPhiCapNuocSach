@@ -68,5 +68,12 @@ namespace QuanLyThuPhiCapNuocsach.BUS
             da = dt.GetTable(sql);
             return da;
         }
+        public DataTable getLoaiKH()
+        {
+            DataTable da = null;
+            String sql = "SELECT sLoaiKH FROM tbl_LoaiKH";
+            da = dt.GetTable(sql);
+            return da;
+        }
     }
 }

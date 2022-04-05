@@ -115,7 +115,7 @@ namespace QuanLyThuPhiCapNuocsach
         private void btnInCT_Click(object sender, EventArgs e)
         {
             rptCongTo rptCongTo = new rptCongTo();
-            rptCongTo.SetDataSource(ctb.getCongTo());
+            rptCongTo.SetDataSource(ctb.reportCT());
             frmReportCT f = new frmReportCT();
             f.crystalReportViewer2.ReportSource = rptCongTo;
             f.ShowDialog();

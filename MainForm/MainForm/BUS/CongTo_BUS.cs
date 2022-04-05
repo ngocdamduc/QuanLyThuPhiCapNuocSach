@@ -20,9 +20,9 @@ namespace QuanLyThuPhiCapNuocsach.BUS
             da = dt.GetTable(sql);
             return da;
         }
-        public void insertCT(string mact, string ngaylapdat, string hangsx, string makh, string manv )
+        public void insertCT(string mact, string ngaylapdat, string hangsx, string makh, string manv)
         {
-            String sql = " INSERT INTO tbl_CongTo VALUES('" + mact + "','" + ngaylapdat + "',N'" + hangsx + "',N'" + makh + "','" + manv +  "')";
+            String sql = " INSERT INTO tbl_CongTo VALUES('" + mact + "','" + ngaylapdat + "',N'" + hangsx + "',N'" + makh + "','" + manv + "')";
             try
             {
                 dt.ExcuteNonQuery(sql);
@@ -66,7 +66,7 @@ namespace QuanLyThuPhiCapNuocsach.BUS
         public DataTable Search(string condition)
         {
             DataTable da = null;
-            String sql = "SELECT * FROM tbl_CongTo WHERE sMaCT LIKE N'%" + condition + "%' OR sMaKH LIKE N'%" + condition + "%'";
+            String sql = "SELECT * FROM tbl_CongTo WHERE sMaKH LIKE N'%" + condition + "%' OR sMaCT LIKE N'%" + condition + "%'";
             da = dt.GetTable(sql);
             return da;
         }
@@ -84,5 +84,13 @@ namespace QuanLyThuPhiCapNuocsach.BUS
             da = dt.GetTable(sql);
             return da;
         }
+        public DataTable reportCT()
+        {
+            DataTable da = null;
+            String sql = "SELECT tbl_CongTo.sMaCT, tbl_KhachHang.sTenKH, tbl_NhanVien.sTenNV, tbl_CongTo.dNgayLapDat, tbl_CongTo.sHangSX FROM ((tbl_CongTo INNER JOIN tbl_KhachHang ON tbl_CongTo.sMaKH = tbl_KhachHang.sMaKH) INNER JOIN tbl_NhanVien ON tbl_CongTo.sMaNV = tbl_NhanVien.sMaNV)";
+            da = dt.GetTable(sql);
+            return da;
+        }
+
     }
 }

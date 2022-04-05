@@ -1,12 +1,5 @@
 ﻿using QuanLyThuPhiCapNuocsach.BUS;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyThuPhiCapNuocsach
@@ -24,18 +17,9 @@ namespace QuanLyThuPhiCapNuocsach
                 this.Close();
             }
             KhachHang_BUS nvb = new KhachHang_BUS();
-        private object txtTimTenKH;
-
-        private void QuanLyKhachHang_Load(object sender, System.EventArgs e)
-            {
-                LoadListKH();
-                BindingData();
-
-            }
-            void LoadListKH()
+        void LoadListKH()
             {
                 dgrChiTietKH.DataSource = nvb.getKhachHang();
-                dataGridView1.DataSource = nvb.getKhachHang();
             }
         private void btnThemKH_Click(object sender, System.EventArgs e)
         {
@@ -45,7 +29,7 @@ namespace QuanLyThuPhiCapNuocsach
                 MessageBox.Show("Tên khách hàng không được để trống !");
             else
                 nvb.insertKH(txtMaKH.Text, txtTenKH.Text, txtDiaChi.Text, dtpNgaySinh.Value.ToString("dd/MM/yyyy"), txtLoaiKH.Text);
-            QuanLyKhachHang_Load(sender, e);
+                QuanLyKhachHang_Load_1(sender, e);
         }
 
         private void btnSuaKH_Click(object sender, System.EventArgs e)
@@ -60,7 +44,7 @@ namespace QuanLyThuPhiCapNuocsach
                         MessageBox.Show("Tên khách hàng không được để trống !");
                     else
                         nvb.updateKH(txtMaKH.Text, txtTenKH.Text, txtDiaChi.Text, dtpNgaySinh.Value.ToString("dd/MM/yyyy"), txtLoaiKH.Text);
-                    QuanLyKhachHang_Load(sender, e);
+                    QuanLyKhachHang_Load_1(sender, e);
                 }
             }
             catch (Exception ex)
@@ -76,7 +60,7 @@ namespace QuanLyThuPhiCapNuocsach
                 if (MessageBox.Show("Bạn có muốn xóa không?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     nvb.deleteKH(txtMaKH.Text);
-                    QuanLyKhachHang_Load(sender, e);
+                    QuanLyKhachHang_Load_1(sender, e);
                 }
             }
             catch (Exception ex)
@@ -115,6 +99,12 @@ namespace QuanLyThuPhiCapNuocsach
             txtDiaChi.Text = " ";
             dtpNgaySinh.Text = " ";
             txtLoaiKH.Text = " ";
+        }
+
+        private void QuanLyKhachHang_Load_1(object sender, EventArgs e)
+        {
+            LoadListKH();
+            BindingData();
         }
     }
     }

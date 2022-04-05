@@ -21,7 +21,7 @@ namespace QuanLyThuPhiCapNuocsach
             else if (txtCSM.Text.Trim() == "")
                 MessageBox.Show("Chỉ số mới không được để trống! ");
             else
-                hdb.insertHD(txtMaHD.Text, cbMaCT.Text, txtCSC.Text, txtCSM.Text, dtpNgayLap.Value.ToString("yyyy-MM-dd"), cbMaKH.Text, cbMaNV.Text, cbLoaiKH.Text);
+                hdb.insertHD(txtMaHD.Text, cbMaCT.Text, txtCSC.Text, txtCSM.Text, dtpNgayLap.Value.ToString("yyyy-MM-dd"), cbMaKH.Text, cbMaNV.Text, clbLoaiKH.CheckedItems.ToString());
             QuanLyHoaDon_Load(sender, e);
         }
 
@@ -42,12 +42,14 @@ namespace QuanLyThuPhiCapNuocsach
             cbMaKH.DataSource = hdb.getKH();
             cbMaCT.DisplayMember = "sMaCT";
             cbMaCT.DataSource = hdb.getCT();
-            cbLoaiKH.DisplayMember = "sLoaiKH";
-            cbLoaiKH.DataSource = hdb.getLoaiKH();
+            //clbLoaiKH.DataSource = hdb.getLoaiKH();
+            clbLoaiKH.DisplayMember = "sLoaiKH";
+            //cbLoaiKH.DataSource = hdb.getLoaiKH();
         }
         void LoadListHD()
         {
             dgrChiTietHD.DataSource = hdb.getHoaDon();
+            dgrThongKe.DataSource = hdb.getHoaDon();
         }
 
         private void btnSuaHD_Click(object sender, EventArgs e)
@@ -63,7 +65,7 @@ namespace QuanLyThuPhiCapNuocsach
                     else if (txtCSM.Text.Trim() == "")
                         MessageBox.Show("Chỉ số mới không được để trống! ");
                     else
-                        hdb.updateHD(txtMaHD.Text, cbMaCT.Text, txtCSC.Text, txtCSM.Text, dtpNgayLap.Value.ToString("yyyy-MM-dd"), cbMaKH.Text, cbMaNV.Text, cbLoaiKH.Text);
+                        hdb.updateHD(txtMaHD.Text, cbMaCT.Text, txtCSC.Text, txtCSM.Text, dtpNgayLap.Value.ToString("yyyy-MM-dd"), cbMaKH.Text, cbMaNV.Text, clbLoaiKH.CheckedItems.ToString());
                     QuanLyHoaDon_Load(sender, e);
                 }
             }
@@ -112,12 +114,25 @@ namespace QuanLyThuPhiCapNuocsach
             cbMaCT.DataBindings.Add(new Binding("Text", dgrChiTietHD.DataSource, "sMaCT", true, DataSourceUpdateMode.Never));
             dtpNgayLap.DataBindings.Clear();
             dtpNgayLap.DataBindings.Add(new Binding("Text", dgrChiTietHD.DataSource, "dNgayLap", true, DataSourceUpdateMode.Never));
-            cbLoaiKH.DataBindings.Clear();
-            cbLoaiKH.DataBindings.Add(new Binding("Text", dgrChiTietHD.DataSource, "sLoaiKH", true, DataSourceUpdateMode.Never));
+            clbLoaiKH.DataBindings.Clear();
+            clbLoaiKH.DataBindings.Add(new Binding("Text", dgrChiTietHD.DataSource, "sLoaiKH", true, DataSourceUpdateMode.Never));
             txtCSC.DataBindings.Clear();
             txtCSC.DataBindings.Add(new Binding("Text", dgrChiTietHD.DataSource, "bChiSoCu", true, DataSourceUpdateMode.Never));
             txtCSM.DataBindings.Clear();
             txtCSM.DataBindings.Add(new Binding("Text", dgrChiTietHD.DataSource, "bChiSoMoi", true, DataSourceUpdateMode.Never));
+        }
+
+        private void btnTimHD_Click_1(object sender, EventArgs e)
+        {
+            dgrThongKe.DataSource = hdb.Search(txtTimKiem.Text);
+        }
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            rptHoaDon rptHoaDon = new rptHoaDon();
+            rptHoaDon.SetDataSource(hdb.reportHD(txtTimKiem.Text));
+            frmReportHD f = new frmReportHD();
+            f.rptHD.ReportSource = rptHoaDon;
+            f.ShowDialog();
         }
     }
 }

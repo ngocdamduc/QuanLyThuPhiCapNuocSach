@@ -92,5 +92,12 @@ namespace QuanLyThuPhiCapNuocsach.BUS
             dt = da.GetTable(sql);
             return dt;
         }
+        public DataTable reportHD(string condition)
+        {
+            DataTable dt = null;
+            String sql = "SELECT * FROM view_thanhtien WHERE sTenKH LIKE N'%" + condition + "' ORDER BY MONTH(dNgayLap)";
+            dt = da.GetTable(sql);
+            return dt;
+        }
     }
 }

@@ -42,7 +42,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnSuaHD = new System.Windows.Forms.Button();
             this.btnThemHD = new System.Windows.Forms.Button();
             this.cbMaNV = new System.Windows.Forms.ComboBox();
-            this.cbLoaiKH = new System.Windows.Forms.ComboBox();
             this.cbMaCT = new System.Windows.Forms.ComboBox();
             this.cbMaKH = new System.Windows.Forms.ComboBox();
             this.txtCSM = new System.Windows.Forms.TextBox();
@@ -58,22 +57,20 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbMaHD = new System.Windows.Forms.Label();
             this.lbHeading = new System.Windows.Forms.Label();
             this.tabThongKe = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgrThongKe = new System.Windows.Forms.DataGridView();
             this.lbTraCuu = new System.Windows.Forms.Label();
             this.grTraCuu = new System.Windows.Forms.GroupBox();
             this.btnIn = new System.Windows.Forms.Button();
-            this.btnTimNV = new System.Windows.Forms.Button();
-            this.txtTimTenNV = new System.Windows.Forms.TextBox();
-            this.txtTimMaNV = new System.Windows.Forms.TextBox();
-            this.lbTimTenNV = new System.Windows.Forms.Label();
+            this.btnTimHD = new System.Windows.Forms.Button();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.lbTimMaNV = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.clbLoaiKH = new System.Windows.Forms.CheckedListBox();
             this.tabControl1.SuspendLayout();
             this.tabHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrChiTietHD)).BeginInit();
             this.tabThongKe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrThongKe)).BeginInit();
             this.grTraCuu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +86,7 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             // tabHoaDon
             // 
-            this.tabHoaDon.Controls.Add(this.button1);
+            this.tabHoaDon.Controls.Add(this.clbLoaiKH);
             this.tabHoaDon.Controls.Add(this.dtpNgayLap);
             this.tabHoaDon.Controls.Add(this.dgrChiTietHD);
             this.tabHoaDon.Controls.Add(this.label3);
@@ -100,7 +97,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.tabHoaDon.Controls.Add(this.btnSuaHD);
             this.tabHoaDon.Controls.Add(this.btnThemHD);
             this.tabHoaDon.Controls.Add(this.cbMaNV);
-            this.tabHoaDon.Controls.Add(this.cbLoaiKH);
             this.tabHoaDon.Controls.Add(this.cbMaCT);
             this.tabHoaDon.Controls.Add(this.cbMaKH);
             this.tabHoaDon.Controls.Add(this.txtCSM);
@@ -170,7 +166,7 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             this.btnRefreshHD.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRefreshHD.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefreshHD.Location = new System.Drawing.Point(1123, 432);
+            this.btnRefreshHD.Location = new System.Drawing.Point(1123, 369);
             this.btnRefreshHD.Name = "btnRefreshHD";
             this.btnRefreshHD.Size = new System.Drawing.Size(121, 34);
             this.btnRefreshHD.TabIndex = 22;
@@ -235,14 +231,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.cbMaNV.Name = "cbMaNV";
             this.cbMaNV.Size = new System.Drawing.Size(192, 24);
             this.cbMaNV.TabIndex = 19;
-            // 
-            // cbLoaiKH
-            // 
-            this.cbLoaiKH.FormattingEnabled = true;
-            this.cbLoaiKH.Location = new System.Drawing.Point(807, 240);
-            this.cbLoaiKH.Name = "cbLoaiKH";
-            this.cbLoaiKH.Size = new System.Drawing.Size(192, 24);
-            this.cbLoaiKH.TabIndex = 19;
             // 
             // cbMaCT
             // 
@@ -383,7 +371,7 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             // tabThongKe
             // 
-            this.tabThongKe.Controls.Add(this.dataGridView2);
+            this.tabThongKe.Controls.Add(this.dgrThongKe);
             this.tabThongKe.Controls.Add(this.lbTraCuu);
             this.tabThongKe.Controls.Add(this.grTraCuu);
             this.tabThongKe.Location = new System.Drawing.Point(4, 25);
@@ -394,16 +382,16 @@ namespace QuanLyThuPhiCapNuocsach
             this.tabThongKe.Text = "Thống Kê";
             this.tabThongKe.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dgrThongKe
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(86, 212);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1187, 459);
-            this.dataGridView2.TabIndex = 19;
+            this.dgrThongKe.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgrThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrThongKe.Location = new System.Drawing.Point(86, 212);
+            this.dgrThongKe.Name = "dgrThongKe";
+            this.dgrThongKe.RowHeadersWidth = 51;
+            this.dgrThongKe.RowTemplate.Height = 24;
+            this.dgrThongKe.Size = new System.Drawing.Size(1187, 459);
+            this.dgrThongKe.TabIndex = 19;
             // 
             // lbTraCuu
             // 
@@ -419,10 +407,8 @@ namespace QuanLyThuPhiCapNuocsach
             // grTraCuu
             // 
             this.grTraCuu.Controls.Add(this.btnIn);
-            this.grTraCuu.Controls.Add(this.btnTimNV);
-            this.grTraCuu.Controls.Add(this.txtTimTenNV);
-            this.grTraCuu.Controls.Add(this.txtTimMaNV);
-            this.grTraCuu.Controls.Add(this.lbTimTenNV);
+            this.grTraCuu.Controls.Add(this.btnTimHD);
+            this.grTraCuu.Controls.Add(this.txtTimKiem);
             this.grTraCuu.Controls.Add(this.lbTimMaNV);
             this.grTraCuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grTraCuu.Location = new System.Drawing.Point(86, 19);
@@ -441,56 +427,40 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(121, 42);
             this.btnIn.TabIndex = 15;
-            this.btnIn.Text = "In";
+            this.btnIn.Text = "In HĐ";
             this.btnIn.UseVisualStyleBackColor = false;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
-            // btnTimNV
+            // btnTimHD
             // 
-            this.btnTimNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTimNV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimNV.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTimNV.Location = new System.Drawing.Point(1031, 21);
-            this.btnTimNV.Name = "btnTimNV";
-            this.btnTimNV.Size = new System.Drawing.Size(121, 42);
-            this.btnTimNV.TabIndex = 15;
-            this.btnTimNV.Text = "Tìm";
-            this.btnTimNV.UseVisualStyleBackColor = false;
+            this.btnTimHD.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnTimHD.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimHD.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTimHD.Location = new System.Drawing.Point(1031, 21);
+            this.btnTimHD.Name = "btnTimHD";
+            this.btnTimHD.Size = new System.Drawing.Size(121, 42);
+            this.btnTimHD.TabIndex = 15;
+            this.btnTimHD.Text = "Tìm";
+            this.btnTimHD.UseVisualStyleBackColor = false;
+            this.btnTimHD.Click += new System.EventHandler(this.btnTimHD_Click_1);
             // 
-            // txtTimTenNV
+            // txtTimKiem
             // 
-            this.txtTimTenNV.Location = new System.Drawing.Point(697, 55);
-            this.txtTimTenNV.Name = "txtTimTenNV";
-            this.txtTimTenNV.Size = new System.Drawing.Size(219, 22);
-            this.txtTimTenNV.TabIndex = 1;
-            // 
-            // txtTimMaNV
-            // 
-            this.txtTimMaNV.Location = new System.Drawing.Point(214, 55);
-            this.txtTimMaNV.Name = "txtTimMaNV";
-            this.txtTimMaNV.Size = new System.Drawing.Size(219, 22);
-            this.txtTimMaNV.TabIndex = 1;
-            // 
-            // lbTimTenNV
-            // 
-            this.lbTimTenNV.AutoSize = true;
-            this.lbTimTenNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTimTenNV.ForeColor = System.Drawing.Color.Blue;
-            this.lbTimTenNV.Location = new System.Drawing.Point(514, 55);
-            this.lbTimTenNV.Name = "lbTimTenNV";
-            this.lbTimTenNV.Size = new System.Drawing.Size(165, 23);
-            this.lbTimTenNV.TabIndex = 0;
-            this.lbTimTenNV.Text = "Hoặc Mã Công Tơ";
+            this.txtTimKiem.Location = new System.Drawing.Point(351, 55);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(602, 22);
+            this.txtTimKiem.TabIndex = 1;
             // 
             // lbTimMaNV
             // 
             this.lbTimMaNV.AutoSize = true;
             this.lbTimMaNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimMaNV.ForeColor = System.Drawing.Color.Blue;
-            this.lbTimMaNV.Location = new System.Drawing.Point(69, 55);
+            this.lbTimMaNV.Location = new System.Drawing.Point(27, 55);
             this.lbTimMaNV.Name = "lbTimMaNV";
-            this.lbTimMaNV.Size = new System.Drawing.Size(121, 23);
+            this.lbTimMaNV.Size = new System.Drawing.Size(276, 23);
             this.lbTimMaNV.TabIndex = 0;
-            this.lbTimMaNV.Text = "Nhập Mã KH";
+            this.lbTimMaNV.Text = "Nhập Mã KH hoặc Mã Công Tơ";
             // 
             // contextMenuStrip1
             // 
@@ -498,15 +468,13 @@ namespace QuanLyThuPhiCapNuocsach
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // button1
+            // clbLoaiKH
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1123, 369);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 34);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "In";
-            this.button1.UseVisualStyleBackColor = true;
+            this.clbLoaiKH.FormattingEnabled = true;
+            this.clbLoaiKH.Location = new System.Drawing.Point(815, 243);
+            this.clbLoaiKH.Name = "clbLoaiKH";
+            this.clbLoaiKH.Size = new System.Drawing.Size(192, 55);
+            this.clbLoaiKH.TabIndex = 30;
             // 
             // QuanLyHoaDon
             // 
@@ -523,7 +491,7 @@ namespace QuanLyThuPhiCapNuocsach
             ((System.ComponentModel.ISupportInitialize)(this.dgrChiTietHD)).EndInit();
             this.tabThongKe.ResumeLayout(false);
             this.tabThongKe.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrThongKe)).EndInit();
             this.grTraCuu.ResumeLayout(false);
             this.grTraCuu.PerformLayout();
             this.ResumeLayout(false);
@@ -546,7 +514,6 @@ namespace QuanLyThuPhiCapNuocsach
         private System.Windows.Forms.ComboBox cbMaCT;
         private System.Windows.Forms.ComboBox cbMaKH;
         private System.Windows.Forms.TextBox txtMaHD;
-        private System.Windows.Forms.ComboBox cbLoaiKH;
         private System.Windows.Forms.TextBox txtCSM;
         private System.Windows.Forms.TextBox txtCSC;
         private System.Windows.Forms.Label lbChiSoMoi;
@@ -561,15 +528,13 @@ namespace QuanLyThuPhiCapNuocsach
         private System.Windows.Forms.Button btnThemHD;
         private System.Windows.Forms.GroupBox grTraCuu;
         private System.Windows.Forms.Button btnIn;
-        private System.Windows.Forms.Button btnTimNV;
-        private System.Windows.Forms.TextBox txtTimTenNV;
-        private System.Windows.Forms.TextBox txtTimMaNV;
-        private System.Windows.Forms.Label lbTimTenNV;
+        private System.Windows.Forms.Button btnTimHD;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label lbTimMaNV;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgrThongKe;
         private System.Windows.Forms.Label lbTraCuu;
         private System.Windows.Forms.DateTimePicker dtpNgayLap;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckedListBox clbLoaiKH;
     }
 }

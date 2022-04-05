@@ -46,11 +46,12 @@ namespace QuanLyThuPhiCapNuocsach
             this.btnTimKiemKH = new System.Windows.Forms.Button();
             this.btnXoaKH = new System.Windows.Forms.Button();
             this.tbKhachHang = new System.Windows.Forms.TabPage();
+            this.clbLoaiKH = new System.Windows.Forms.CheckedListBox();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.btnSuaKH = new System.Windows.Forms.Button();
             this.btnThemKH = new System.Windows.Forms.Button();
             this.dgrChiTietKH = new System.Windows.Forms.DataGridView();
             this.lbChiTiet = new System.Windows.Forms.Label();
-            this.cbLoaiKH = new System.Windows.Forms.ComboBox();
             this.lbLoaiKhachHang = new System.Windows.Forms.Label();
             this.lbNgaySinh = new System.Windows.Forms.Label();
             this.lbSDT = new System.Windows.Forms.Label();
@@ -63,7 +64,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbMaKH = new System.Windows.Forms.Label();
             this.lbHeading = new System.Windows.Forms.Label();
             this.tabKhachHang = new System.Windows.Forms.TabControl();
-            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.tbLoaiKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tbKhachHang.SuspendLayout();
@@ -195,7 +195,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbLoaiKH.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbLoaiKH.Location = new System.Drawing.Point(100, 197);
             this.lbLoaiKH.Name = "lbLoaiKH";
-            this.lbLoaiKH.Size = new System.Drawing.Size(96, 25);
+            this.lbLoaiKH.Size = new System.Drawing.Size(98, 26);
             this.lbLoaiKH.TabIndex = 0;
             this.lbLoaiKH.Text = "Đơn Giá";
             // 
@@ -206,7 +206,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbMaLoaiKH.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbMaLoaiKH.Location = new System.Drawing.Point(95, 113);
             this.lbMaLoaiKH.Name = "lbMaLoaiKH";
-            this.lbMaLoaiKH.Size = new System.Drawing.Size(98, 25);
+            this.lbMaLoaiKH.Size = new System.Drawing.Size(103, 26);
             this.lbMaLoaiKH.TabIndex = 0;
             this.lbMaLoaiKH.Text = "Loại KH";
             // 
@@ -258,6 +258,7 @@ namespace QuanLyThuPhiCapNuocsach
             // 
             // tbKhachHang
             // 
+            this.tbKhachHang.Controls.Add(this.clbLoaiKH);
             this.tbKhachHang.Controls.Add(this.dtpNgaySinh);
             this.tbKhachHang.Controls.Add(this.btnClose);
             this.tbKhachHang.Controls.Add(this.btnRefreshKH);
@@ -267,7 +268,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.tbKhachHang.Controls.Add(this.btnThemKH);
             this.tbKhachHang.Controls.Add(this.dgrChiTietKH);
             this.tbKhachHang.Controls.Add(this.lbChiTiet);
-            this.tbKhachHang.Controls.Add(this.cbLoaiKH);
             this.tbKhachHang.Controls.Add(this.lbLoaiKhachHang);
             this.tbKhachHang.Controls.Add(this.lbNgaySinh);
             this.tbKhachHang.Controls.Add(this.lbSDT);
@@ -286,6 +286,21 @@ namespace QuanLyThuPhiCapNuocsach
             this.tbKhachHang.TabIndex = 0;
             this.tbKhachHang.Text = "Khách Hàng";
             this.tbKhachHang.UseVisualStyleBackColor = true;
+            // 
+            // clbLoaiKH
+            // 
+            this.clbLoaiKH.FormattingEnabled = true;
+            this.clbLoaiKH.Location = new System.Drawing.Point(802, 253);
+            this.clbLoaiKH.Name = "clbLoaiKH";
+            this.clbLoaiKH.Size = new System.Drawing.Size(220, 55);
+            this.clbLoaiKH.TabIndex = 15;
+            // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.Location = new System.Drawing.Point(802, 202);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 22);
+            this.dtpNgaySinh.TabIndex = 14;
             // 
             // btnSuaKH
             // 
@@ -333,14 +348,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbChiTiet.TabIndex = 11;
             this.lbChiTiet.Text = "Bảng Chi Tiết Khách Hàng:";
             // 
-            // cbLoaiKH
-            // 
-            this.cbLoaiKH.FormattingEnabled = true;
-            this.cbLoaiKH.Location = new System.Drawing.Point(802, 276);
-            this.cbLoaiKH.Name = "cbLoaiKH";
-            this.cbLoaiKH.Size = new System.Drawing.Size(192, 24);
-            this.cbLoaiKH.TabIndex = 10;
-            // 
             // lbLoaiKhachHang
             // 
             this.lbLoaiKhachHang.AutoSize = true;
@@ -348,7 +355,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbLoaiKhachHang.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbLoaiKhachHang.Location = new System.Drawing.Point(601, 272);
             this.lbLoaiKhachHang.Name = "lbLoaiKhachHang";
-            this.lbLoaiKhachHang.Size = new System.Drawing.Size(190, 25);
+            this.lbLoaiKhachHang.Size = new System.Drawing.Size(195, 26);
             this.lbLoaiKhachHang.TabIndex = 8;
             this.lbLoaiKhachHang.Text = "Loại Khách Hàng";
             // 
@@ -359,7 +366,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbNgaySinh.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbNgaySinh.Location = new System.Drawing.Point(601, 198);
             this.lbNgaySinh.Name = "lbNgaySinh";
-            this.lbNgaySinh.Size = new System.Drawing.Size(114, 25);
+            this.lbNgaySinh.Size = new System.Drawing.Size(117, 26);
             this.lbNgaySinh.TabIndex = 7;
             this.lbNgaySinh.Text = "Ngày Sinh";
             // 
@@ -370,7 +377,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbSDT.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbSDT.Location = new System.Drawing.Point(601, 131);
             this.lbSDT.Name = "lbSDT";
-            this.lbSDT.Size = new System.Drawing.Size(57, 25);
+            this.lbSDT.Size = new System.Drawing.Size(57, 26);
             this.lbSDT.TabIndex = 6;
             this.lbSDT.Text = "SĐT";
             // 
@@ -381,7 +388,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbDiaChi.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbDiaChi.Location = new System.Drawing.Point(149, 272);
             this.lbDiaChi.Name = "lbDiaChi";
-            this.lbDiaChi.Size = new System.Drawing.Size(88, 25);
+            this.lbDiaChi.Size = new System.Drawing.Size(91, 26);
             this.lbDiaChi.TabIndex = 5;
             this.lbDiaChi.Text = "Địa Chỉ";
             // 
@@ -392,7 +399,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbTenKH.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbTenKH.Location = new System.Drawing.Point(57, 198);
             this.lbTenKH.Name = "lbTenKH";
-            this.lbTenKH.Size = new System.Drawing.Size(184, 25);
+            this.lbTenKH.Size = new System.Drawing.Size(187, 26);
             this.lbTenKH.TabIndex = 4;
             this.lbTenKH.Text = "Tên Khách Hàng";
             // 
@@ -431,7 +438,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.lbMaKH.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbMaKH.Location = new System.Drawing.Point(57, 131);
             this.lbMaKH.Name = "lbMaKH";
-            this.lbMaKH.Size = new System.Drawing.Size(181, 25);
+            this.lbMaKH.Size = new System.Drawing.Size(183, 26);
             this.lbMaKH.TabIndex = 2;
             this.lbMaKH.Text = "Mã Khách Hàng";
             // 
@@ -459,13 +466,6 @@ namespace QuanLyThuPhiCapNuocsach
             this.tabKhachHang.TabIndex = 1;
             this.tabKhachHang.Tag = "";
             // 
-            // dtpNgaySinh
-            // 
-            this.dtpNgaySinh.Location = new System.Drawing.Point(802, 202);
-            this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 22);
-            this.dtpNgaySinh.TabIndex = 14;
-            // 
             // QuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -474,6 +474,7 @@ namespace QuanLyThuPhiCapNuocsach
             this.Controls.Add(this.tabKhachHang);
             this.Name = "QuanLyKhachHang";
             this.Text = "QuanLyKhachHang";
+            this.Load += new System.EventHandler(this.QuanLyKhachHang_Load_1);
             this.tbLoaiKhachHang.ResumeLayout(false);
             this.tbLoaiKhachHang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -508,7 +509,6 @@ namespace QuanLyThuPhiCapNuocsach
         private System.Windows.Forms.Button btnThemKH;
         private System.Windows.Forms.DataGridView dgrChiTietKH;
         private System.Windows.Forms.Label lbChiTiet;
-        private System.Windows.Forms.ComboBox cbLoaiKH;
         private System.Windows.Forms.Label lbLoaiKhachHang;
         private System.Windows.Forms.Label lbNgaySinh;
         private System.Windows.Forms.Label lbSDT;
@@ -522,5 +522,6 @@ namespace QuanLyThuPhiCapNuocsach
         private System.Windows.Forms.Label lbHeading;
         private System.Windows.Forms.TabControl tabKhachHang;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.CheckedListBox clbLoaiKH;
     }
 }

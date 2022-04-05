@@ -109,3 +109,4 @@ F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\bin\Debug\CrystalDecisions.ReportAp
 F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\bin\Debug\stdole.dll
 F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.frmReportCT.resources
+F:\QuanLyThuPhiCapNuocSach\MainForm\MainForm\obj\Debug\QuanLyThuPhiCapNuocsach.frmReportHD.resources

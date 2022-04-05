@@ -30,6 +30,7 @@ namespace QuanLyThuPhiCapNuocsach
         }
         private void btnThemNV_Click(object sender, System.EventArgs e)
         {
+           
             if (txtMaNV.Text.Trim() == "")
                 MessageBox.Show("Mã nhân viên không được để trống !");
             else if (txtTenNV.Text.Trim() == "")
