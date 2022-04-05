@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\MainForm"
+    "\\MainForm",
+    "\\SQL"
   ],
-  "SelectedNode": "\\MainForm\\QuanLyThuPhiCapNuocSach.sln",
+  "SelectedNode": "\\SQL",
   "PreviewInSolutionExplorer": true
 }
